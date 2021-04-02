@@ -7,9 +7,6 @@ class App extends React.Component
   render()
   {
     return (
-<<<<<<< HEAD
-      <Chat/>
-=======
       <div>
         <header id="header">
           <div>
@@ -970,7 +967,6 @@ class App extends React.Component
         </footer>
       
       </div>
->>>>>>> 9156faaed3a674c45a4156d3851113f9dbb91519
        
 ) } }
  export default App;
