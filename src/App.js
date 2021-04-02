@@ -21,24 +21,31 @@ class App extends React.Component
                   </div>
                   <div class="mainmenu pull-left">
                     <ul class="nav navbar-nav collapse navbar-collapse">
-                      <li><a href="#" class="active">Home</a></li>
-                      <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
+                      <li><a href="#" class="active"><i class="fa fa-home"></i>  Home</a></li>
+                      <li class="dropdown"><a href="#"><i class="fa fa-tshirt"></i>  Products</a>
                                           <ul role="menu" class="sub-menu">
-                                              <li><a href="#">Products</a></li>
-                          <li><a href="#">Product Details</a></li> 
-                          <li><a href="#">Checkout</a></li> 
-                          <li><a href="#">Cart</a></li> 
-                          <li><a href="#">Login</a></li> 
+                                              <li><a href="#">Men</a></li>
+                          <li><a href="#">Women</a></li> 
+                          <li><a href="#">Kids</a></li> 
+                          <li><a href="#">Home and Living</a></li> 
                                           </ul>
                                       </li> 
-                      <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
+                      <li class="dropdown"><a href="#"><i class="fa fa-dress"></i>Offers</a>
                                           <ul role="menu" class="sub-menu">
-                                              <li><a href="#">Blog List</a></li>
-                          <li><a href="#">Blog Single</a></li>
+                                              <li><a href="#">Individual Offers</a></li>
+                          <li><a href="#">Group Offers</a></li>
                                           </ul>
                                       </li> 
-                      <li><a href="#">404</a></li>
-                      <li><a href="#">Contact</a></li>
+                          <li class="dropdown"><a href="#"><i class="fa fa-user"></i>  Profile</a>
+                          <ul role="menu" class="sub-menu">
+                                              <li><a href="#">Login/Signup</a></li>
+                          <li><a href="#">Orders</a></li>
+                          <li><a href="#">Rooms</a></li>
+                          <li><a href="#">Coupons</a></li>
+                          <li><a href="#">Contact Us</a></li>
+                                          </ul></li>
+                          <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
+                          <li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                     </ul>
                   </div>
                 </div>
@@ -51,7 +58,7 @@ class App extends React.Component
             </div>
           </div>
         </header>
-        
+        <hr></hr>
         <section id="slider">
           <div class="container">
             <div class="row">
@@ -274,7 +281,7 @@ class App extends React.Component
                       <div class="choose">
                         <ul class="nav nav-pills nav-justified">
                           <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                          <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                          <li><a href="#"><i class="fa fa-plus-square"></i>Add to Room Wishlist</a></li>
                         </ul>
                       </div>
                     </div>
@@ -299,7 +306,7 @@ class App extends React.Component
                       <div class="choose">
                         <ul class="nav nav-pills nav-justified">
                           <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                          <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                          <li><a href="#"><i class="fa fa-plus-square"></i>Add to Room Wishlist</a></li>
                         </ul>
                       </div>
                     </div>
@@ -324,7 +331,7 @@ class App extends React.Component
                       <div class="choose">
                         <ul class="nav nav-pills nav-justified">
                           <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                          <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                          <li><a href="#"><i class="fa fa-plus-square"></i>Add to Room Wishlist</a></li>
                         </ul>
                       </div>
                     </div>
@@ -350,7 +357,7 @@ class App extends React.Component
                       <div class="choose">
                         <ul class="nav nav-pills nav-justified">
                           <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                          <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                          <li><a href="#"><i class="fa fa-plus-square"></i>Add to Room Wishlist</a></li>
                         </ul>
                       </div>
                     </div>
@@ -376,7 +383,7 @@ class App extends React.Component
                       <div class="choose">
                         <ul class="nav nav-pills nav-justified">
                           <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                          <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                          <li><a href="#"><i class="fa fa-plus-square"></i>Add to Room Wishlist</a></li>
                         </ul>
                       </div>
                     </div>
@@ -401,7 +408,7 @@ class App extends React.Component
                       <div class="choose">
                         <ul class="nav nav-pills nav-justified">
                           <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                          <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                          <li><a href="#"><i class="fa fa-plus-square"></i>Add to Room Wishlist</a></li>
                         </ul>
                       </div>
                     </div>
