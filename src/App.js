@@ -53,7 +53,7 @@ class App extends React.Component
                 </div>
                 <div class="col-sm-3">
                   <div class="search_box pull-right">
-                    <input type="text" placeholder="Search"/>
+                    <input type="text" placeholder="Search for products brands and more"/>
                   </div>
                 </div>
               </div>
@@ -75,8 +75,8 @@ class App extends React.Component
                   <div class="carousel-inner">
                     <div class="item active">
                       <div class="col-sm-6">
-                        <h1><span>THERICH</span>-SHOP</h1>
-                        <h2>Free E-Commerce Template</h2>
+                        <h1><span>THE</span>-SHOP</h1>
+                        <h2>E-Commerce Website</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                         <button type="button" class="btn btn-default get">Get it now</button>
                       </div>
@@ -87,8 +87,8 @@ class App extends React.Component
                     </div>
                     <div class="item">
                       <div class="col-sm-6">
-                        <h1><span>THE</span>-POST</h1>
-                        <h2>100% Responsive Design</h2>
+                        <h1><span>THE</span>-SHOP</h1>
+                        <h2>Myntra Hackathon</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                         <button type="button" class="btn btn-default get">Get it now</button>
                       </div>
@@ -100,8 +100,8 @@ class App extends React.Component
                     
                     <div class="item">
                       <div class="col-sm-6">
-                        <h1><span>THE</span>-POST</h1>
-                        <h2>Free Ecommerce Template</h2>
+                        <h1><span>THE</span>-SHOP</h1>
+                        <h2>Myntra Hackathon</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                         <button type="button" class="btn btn-default get">Get it now</button>
                       </div>
@@ -159,7 +159,7 @@ class App extends React.Component
                         <h4 class="panel-title">
                           <a data-toggle="collapse" data-parent="#accordian" href="#mens">
                             <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                            Mens
+                            Men
                           </a>
                         </h4>
                       </div>
@@ -186,7 +186,7 @@ class App extends React.Component
                         <h4 class="panel-title">
                           <a data-toggle="collapse" data-parent="#accordian" href="#womens">
                             <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                            Womens
+                            Women
                           </a>
                         </h4>
                       </div>
@@ -214,19 +214,15 @@ class App extends React.Component
                     </div>
                     <div class="panel panel-default">
                       <div class="panel-heading">
-                        <h4 class="panel-title"><a href="#">Households</a></h4>
+                        <h4 class="panel-title"><a href="#">Home and Living</a></h4>
                       </div>
                     </div>
                     <div class="panel panel-default">
                       <div class="panel-heading">
-                        <h4 class="panel-title"><a href="#">Interiors</a></h4>
+                        <h4 class="panel-title"><a href="#">Interior</a></h4>
                       </div>
                     </div>
-                    <div class="panel panel-default">
-                      <div class="panel-heading">
-                        <h4 class="panel-title"><a href="#">Clothing</a></h4>
-                      </div>
-                    </div>
+                    
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title"><a href="#">Bags</a></h4>
@@ -262,7 +258,7 @@ class App extends React.Component
               
               <div class="col-sm-9 padding-right">
                 <div class="features_items">
-                  <h2 class="title text-center">Features Items</h2>
+                  <h2 class="title text-center">Items</h2>
                   <div class="col-sm-4">
                     <div class="product-image-wrapper">
                       <div class="single-products">
@@ -814,7 +810,7 @@ class App extends React.Component
               <div class="row">
                 <div class="col-sm-2">
                   <div class="companyinfo">
-                    <h2><span>THE</span>-POST</h2>
+                    <h2><span>THE</span>-SHOP</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
                   </div>
                 </div>
@@ -909,8 +905,8 @@ class App extends React.Component
                     <h2>Quock Shop</h2>
                     <ul class="nav nav-pills nav-stacked">
                       <li><a href="#">T-Shirt</a></li>
-                      <li><a href="#">Mens</a></li>
-                      <li><a href="#">Womens</a></li>
+                      <li><a href="#">Men</a></li>
+                      <li><a href="#">Women</a></li>
                       <li><a href="#">Gift Cards</a></li>
                       <li><a href="#">Shoes</a></li>
                     </ul>
@@ -930,7 +926,7 @@ class App extends React.Component
                 </div>
                 <div class="col-sm-2">
                   <div class="single-widget">
-                    <h2>About POST</h2>
+                    <h2>About SHOP</h2>
                     <ul class="nav nav-pills nav-stacked">
                       <li><a href="#">Company Information</a></li>
                       <li><a href="#">Careers</a></li>
@@ -942,7 +938,7 @@ class App extends React.Component
                 </div>
                 <div class="col-sm-3 col-sm-offset-1">
                   <div class="single-widget">
-                    <h2>About POST</h2>
+                    <h2>About SHOP</h2>
                     <form action="#" class="searchform">
                       <input type="text" placeholder="Your email address" />
                       <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
@@ -959,7 +955,7 @@ class App extends React.Component
             <div class="container">
               <div class="row">
                 <p class="pull-left">Copyright © 2020 THERICH-SHOP Inc. All rights reserved.</p>
-                <p class="pull-right">Designed by <span><a target="_blank" href="#">Therichpost</a></span></p>
+                <p class="pull-right">Designed by <span><a target="_blank" href="#">Therichshop</a></span></p>
               </div>
             </div>
           </div>
