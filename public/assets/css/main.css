@@ -8,7 +8,6 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background:;
   position: relative;
   font-weight:400px;
 }
@@ -255,17 +254,18 @@ a#scrollUp i{
 .search_box input {
   background: #F0F0E9;
   border: medium none;
-  color: #B2B2B2;
+  border-radius: 5px;
+  color: #a19d9d;
   font-family: 'roboto';
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 300;
   height: 35px;
   outline: medium none;
   padding-left: 10px;
-  width: 155px;
+  width: 500px;
   background-image: url(../images/home/searchicon.png);
   background-repeat: no-repeat;
-  background-position: 130px;
+  background-position: 480px;
 }
 
 
@@ -899,7 +899,6 @@ h2.title {
   transition: height 500ms ease 0s;
   width: 100%;
   display: block;
-  opacity:;
 }
 
 .single-products:hover .product-overlay {
