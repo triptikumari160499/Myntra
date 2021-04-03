@@ -1,9 +1,7 @@
 import MyMessage from './MyMessage';
 import TheirMessage from './TheirMessage';
 import MessageForm from './MessageForm';
-<button type="submit" className="send-button">
-        <LoginOutlined className="send-icon" />
-      </button>
+
 const ChatFeed = (props) => {
   const { chats, activeChat, userName, messages } = props;
 
