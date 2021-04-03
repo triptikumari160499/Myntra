@@ -1,17 +1,16 @@
 import { ChatEngine } from 'react-chat-engine';
-
+import './chat.css';
 import ChatFeed from './ChatFeed';
-import LoginForm from '../Chat/LoginForm';
+import LoginForm from './LoginForm';
 //import './App.css';
-import Main from '../Main/main';
+// import Main from '../Main/main';
 const projectID = 'dd1bb131-88b0-4213-835c-26ee5449ff0b';
 
 const Chat = () => {
   if (!localStorage.getItem('username')) return <LoginForm />;
 
   return (
-    <div>
-    <Main/>
+    <div> 
     <ChatEngine
       height="100vh"
       projectID={projectID}
