@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    Link
+  } from "react-router-dom";
 import './style.css';
 class Style extends React.Component
 {
@@ -37,6 +41,8 @@ class Style extends React.Component
                     <div id="line"></div>
                 </i>
                 <i class="ri-star-line"></i>
+                {/* Links to the Chat Component */}
+                <Link to="/chat"><i class="chaticon">Chat</i></Link>
                 <i class="ri-shopping-bag-line"></i>
             </div>
         </div>
