@@ -1,4 +1,12 @@
 import React from 'react';
+import Chat from '../Chat/chat';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Redirect,
+    Route,
+    Link
+  } from "react-router-dom";
 import './style.css';
 class Style extends React.Component
 {
@@ -37,6 +45,8 @@ class Style extends React.Component
                     <div id="line"></div>
                 </i>
                 <i class="ri-star-line"></i>
+                {/* Links to the Chat Component */}
+                <Link to="/chat"><i class="chaticon">Chat</i></Link>
                 <i class="ri-shopping-bag-line"></i>
             </div>
         </div>
@@ -1048,6 +1058,7 @@ class Style extends React.Component
                 friends, family and loved-ones and avail our gift services for special occasions.</p>
             </div>
         </footer>
+
     </div>
     )
   }
