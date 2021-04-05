@@ -13,11 +13,10 @@ function Form1(props) {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          Invite Friends
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
         <Form>
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Email address</Form.Label>
@@ -26,16 +25,16 @@ function Form1(props) {
       We'll never share your email with anyone else.
     </Form.Text>
   </Form.Group>
-
+{/* 
   <Form.Group controlId="formBasicPassword">
     <Form.Label>Password</Form.Label>
     <Form.Control type="password" placeholder="Password" />
   </Form.Group>
   <Form.Group controlId="formBasicCheckbox">
     <Form.Check type="checkbox" label="Check me out" />
-  </Form.Group>
+  </Form.Group> */}
   <Button variant="primary" type="submit">
-    Submit
+    Share
   </Button>
 </Form>
       </Modal.Body>

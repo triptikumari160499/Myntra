@@ -215,7 +215,7 @@ h1 {
 }
 
 #d {
-    margin-top: 140px;
+    margin-top: 8em;
 }
 
 #bigdeals {
@@ -777,7 +777,9 @@ li {
 
 .card-link-div {
     text-align: center;
-    margin:0px auto;
+    display: flex;
+    justify-content: space-evenly;
+
 }
 
 .site-form-in-drawer-wrapper {
