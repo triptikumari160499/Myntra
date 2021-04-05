@@ -1,13 +1,19 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
-    Link
+   BrowserRouter as Router,
+   Link
   } from "react-router-dom";
+  import bootstrap from "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import './style.css';
+import swal from "sweetalert";
 class Style extends React.Component
 {
   render()
+
   {
+      const share=()=>{
+        swal("Good job!", "You clicked the button!", "success");
+      }
     return (
     <div id="back">
       <header>
@@ -65,13 +71,19 @@ class Style extends React.Component
         </div>
         <h1>DEALS OF THE DAY</h1>
         <div id="deals">
-            <div id="deals1">
-                <div class="dealsimg">
-                    <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/14/7a39ffa4-210d-4c35-a1bf-98d29663805a1615736485485-UpTo250.jpg"
+        <div id="deals1" >
+  <div class="dealsimg">
+  <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/14/7a39ffa4-210d-4c35-a1bf-98d29663805a1615736485485-UpTo250.jpg"
                         alt=""></img>
-                </div>
-
-            </div>
+    
+  </div>
+  <div class = "card-link-div">
+  <a href="#" class="card-link"><i class="fas fa-share-alt"></i></a>
+  <a href="/chat" class="card-link"><i class="fas fa-share-alt"></i></a>
+  <a style={{cursor:"pointer"}}onClick={share} class="card-link"><i class="fas fa-share-alt"></i></a>
+  </div>
+</div>
+            
             <div id="deals2">
                 <div class="dealsimg">
                     <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/14/7e60ddec-f03f-4e01-9f60-1257b8ea9df51615736485547-40-70.jpg"

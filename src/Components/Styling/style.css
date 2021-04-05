@@ -774,3 +774,8 @@ li {
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.card-link-div {
+    text-align: center;
+    margin:0px auto;
+}
