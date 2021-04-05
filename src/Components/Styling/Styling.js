@@ -1,20 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-import Chat from '../Chat/chat';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Redirect,
-    Route,
-    Link
-  } from "react-router-dom";
-=======
 import {
     BrowserRouter as Router,
     Link
 } from "react-router-dom";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
->>>>>>> 8a87062ef15bad5454a6b85e6de55490a4c0a84a
 import './style.css';
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -62,33 +51,6 @@ class Style extends React.Component {
                             <h5>Search for products, brands and more</h5>
                         </div>
 
-<<<<<<< HEAD
-            <div id="profile">
-                <i id="pro" class="ri-account-pin-circle-line">
-                    <div id="line"></div>
-                </i>
-                <i class="ri-star-line"></i>
-                {/* Links to the Chat Component */}
-                <Link to="/chat"><i class="chaticon">Chat</i></Link>
-                <i class="ri-shopping-bag-line"></i>
-            </div>
-        </div>
-        <div id="overlay">
-            <div id="main">
-                <div id="a" class="elem">
-                    <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/14/dc6cf926-8dfe-4161-b4d0-e78c622df2771615743989381-Desktop-Shop-Now.gif"
-                        alt=""></img>
-                </div>
-                <div id="b" class="elem">
-                    <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/14/1ae5e872-3528-463a-8968-d4edb5a281791615735151188-Lifestyle_Desk_Banner.jpg"
-                        alt=""></img>
-                </div>
-                <div id="c" class="elem">
-                    <img src="https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/14/92d441e5-422c-425b-91a6-0da8c398f55c1615735151174-cat-fest-dk-mar.jpg"
-                        alt=""></img>
-                </div>
-            </div>
-=======
                         <div id="profile">
                             <i id="pro" class="ri-account-pin-circle-line">
                                 <div id="line"></div>
@@ -96,7 +58,6 @@ class Style extends React.Component {
                             <i class="ri-star-line"></i>
                             {/* Links to the Chat Component */}
                             <Link to="/chat"><i class="chaticon">Chat</i></Link>
->>>>>>> 8a87062ef15bad5454a6b85e6de55490a4c0a84a
 
                             <div>
                          {/* <Button variant="primary" onClick={this.Button1}>Primary</Button> */}
