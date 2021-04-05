@@ -12,19 +12,6 @@ class App extends React.Component
   render()
   {
     return (
-<<<<<<< HEAD
-      //Switches to the route
-      <Switch>
-      {/* Home Route */}
-          <Route 
-            exact path="/"
-            component={Style}/>
-      {/* Chat Component */}
-          <Route 
-            exact path="/chat" 
-            component={Chat}/>
-      </Switch>
-=======
       <div>
       
      //Switches to the route
@@ -41,6 +28,5 @@ class App extends React.Component
      </div>
      
      
->>>>>>> 8a87062ef15bad5454a6b85e6de55490a4c0a84a
 ) } }
  export default App;

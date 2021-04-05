@@ -1111,16 +1111,8 @@ class Style extends React.Component {
                     </div>
                 </footer>
             </div>
-<<<<<<< HEAD
-        </footer>
-
-    </div>
-    )
-  }
-=======
         )
     }
->>>>>>> 8a87062ef15bad5454a6b85e6de55490a4c0a84a
 }
 
 export default Style;
