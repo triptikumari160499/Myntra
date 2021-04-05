@@ -1,11 +1,15 @@
 import React from 'react';
 //import '../App.css';
+
+
 class Main extends React.Component
 {
   render()
   {
     return (
       <div>
+      <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
         <header id="header">
           <div>
             <div class="container">

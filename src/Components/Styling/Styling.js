@@ -60,18 +60,9 @@ class Style extends React.Component {
                             <Link to="/chat"><i class="chaticon">Chat</i></Link>
 
                             <div>
-                         {/* <Button variant="primary" onClick={this.Button1}>Primary</Button> */}
-                         <Button variant="primary" onClick= {() => this.setState({modalShow:true})}>
-                            Launch vertically centered modal
-                        </Button>
+            
 
-                        <Form1
-                            show={this.state.modalShow}
-                            onHide= {() => this.setState({modalShow:false})}
-                              />
-
-
-                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                {/* <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -82,14 +73,17 @@ class Style extends React.Component {
                                             </div>
                                             <div class="modal-body">
                                                 ...
-      </div>
+                                                
+                                                </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                                 <button type="button" class="btn btn-primary">Save changes</button>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
+
+
                             </div>
 
 
@@ -112,20 +106,32 @@ class Style extends React.Component {
                             </div>
                         </div>
 
-                    </div>
+                    </div>            
+                    {/* This renders the modal form, when the friends button is clicked see below the modalShow is set to True */}
+                        <Form1
+                            show={this.state.modalShow}
+                            onHide= {() => this.setState({modalShow:false})}
+                        />
+
                     <h1>DEALS OF THE DAY</h1>
                     <div id="deals">
+
                         <div id="deals1" >
                             <div class="dealsimg">
                                 <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2021/3/14/7a39ffa4-210d-4c35-a1bf-98d29663805a1615736485485-UpTo250.jpg"
                                     alt=""></img>
 
                             </div>
-                            <div class="card-link-div">
-                            <a style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></a>
-                            <a style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="fas fa-users"></i></a>
-                                <a href="/chat" class="card-link"><i class="fas fa-share-alt"></i></a>
-                               
+                            
+                            <div class="card-link-div ">
+                                <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
+                                 {/* <Button variant="primary" onClick={this.Button1}>Primary</Button> */}
+                         
+                                <Button variant="light" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
+                                <Link to="/chat">
+                                    <Button variant="light"><i class="fas fa-share-alt"></i>                    
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
 

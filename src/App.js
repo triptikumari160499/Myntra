@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import Style from './Components/Styling/Styling';
 import Main from './Components/Main/main';
-import Chat from './Components/Chat/chat';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Chat from './Components/Chat/chat';
 //import Form1 from './Components/Chat/Properties/Form';
 
 class App extends React.Component
@@ -13,7 +13,7 @@ class App extends React.Component
     return (
       <div>
       
-     //Switches to the route
+     {/* //Switches to the route */}
      <Switch>
      {/* Home Route */}
          <Route 
