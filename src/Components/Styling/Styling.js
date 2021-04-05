@@ -52,7 +52,7 @@ class Style extends React.Component
                 <Link to="/chat"><i class="chaticon">Chat</i></Link>
                
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
+  <Form1/>
 </button>
 <div>
 
