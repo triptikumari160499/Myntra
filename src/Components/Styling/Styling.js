@@ -60,13 +60,7 @@ class Style extends React.Component {
                             <Link to="/chat"><i class="chaticon">Chat</i></Link>
 
                             <div>
-                        
-
-                        <Form1
-                            show={this.state.modalShow}
-                            onHide= {() => this.setState({modalShow:false})}
-                        />
-
+            
 
                                 {/* <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
@@ -112,7 +106,13 @@ class Style extends React.Component {
                             </div>
                         </div>
 
-                    </div>
+                    </div>            
+                    {/* This renders the modal form, when the friends button is clicked see below the modalShow is set to True */}
+                        <Form1
+                            show={this.state.modalShow}
+                            onHide= {() => this.setState({modalShow:false})}
+                        />
+
                     <h1>DEALS OF THE DAY</h1>
                     <div id="deals">
 
