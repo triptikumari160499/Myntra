@@ -14,10 +14,6 @@ class Style extends React.Component {
         super(props); 
         this.state = {modalShow : false}
      } 
-    Button1 = () => {
-      alert(  
-        );
-    }
     render() {
         
         const share = () => {
@@ -123,16 +119,7 @@ class Style extends React.Component {
 
                             </div>
                             
-                            <div class="card-link-div ">
-                                <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
-                                 {/* <Button variant="primary" onClick={this.Button1}>Primary</Button> */}
-                         
-                                <Button variant="light" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
-                                <Link to="/chat">
-                                    <Button variant="light"><i class="fas fa-share-alt"></i>                    
-                                    </Button>
-                                </Link>
-                            </div>
+                           
                         </div>
 
                         <div id="deals2">
@@ -382,6 +369,16 @@ class Style extends React.Component {
                             <div class="westernimg">
                                 <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/28/655751e9-66c3-49b5-acfc-a508068e6e581595936000398-Content-westernwear-Trends-Vibrantcolourblocks.jpg"
                                     alt=""></img>
+                            </div>
+                            <div class="card-link-div ">
+                                <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
+                            
+                         
+                                <Button variant="light" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
+                                <Link to="/chat">
+                                    <Button variant="light"><i class="fas fa-share-alt"></i>                    
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
 
