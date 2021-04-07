@@ -379,6 +379,7 @@ class Style extends React.Component {
                                     <Button variant="light"><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link>
+                                <Link to="/stories"><i class="chaticon">Chat</i></Link>
                             </div>
                         </div>
 
