@@ -1,8 +1,7 @@
 .App {
     text-align: center;
     min-height: 100vh;
-    display: absolute;
-    margin-top: 10px;
+    margin-top: 4em;
     justify-content: center;
     align-items: center;
     position: -webkit-sticky;
@@ -11,7 +10,12 @@
   .chatbot{
     bottom: 0;
     height: 70%;
-    right : 30px;
+    right : 50px;
     position: fixed;
     width: 350px;
+  }
+
+  .react-chatbot-kit-chat-container{
+    height: 450px;
+    width: 300px;
   }
