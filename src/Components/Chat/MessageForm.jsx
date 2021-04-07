@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { SendOutlined, PictureOutlined} from '@ant-design/icons';
 import { sendMessage, isTyping } from 'react-chat-engine';
 import React, { Component }  from 'react';
+import Button from 'react-bootstrap/Button'
 
 const MessageForm = (props) => {
   const [value, setValue] = useState('');
@@ -53,6 +54,8 @@ const MessageForm = (props) => {
       <button type="submit" className="send-button">
         <SendOutlined className="send-icon" />
       </button>
+      {/* Link to Wishlist page */}
+      <Button type="submit">Wishlist</Button>
     </form>
   );
 };
