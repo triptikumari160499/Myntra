@@ -3,6 +3,9 @@ import "../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from 'react-bootstrap/DropdownButton';
+
 function Form1(props) {
   return (
     <Modal
@@ -19,11 +22,23 @@ function Form1(props) {
       <Modal.Body>
         <Form>
   <Form.Group controlId="formBasicEmail">
-    <Form.Label>Username</Form.Label>
-    <Form.Control type="text" placeholder="Enter Username" />
+    <Form.Label>Share with </Form.Label>
     
-    <Form.Label>Password</Form.Label>
-    <Form.Control type="password" />
+    {/* <Form.Control type="text" placeholder="Enter Username" />
+     */}
+    
+    <DropdownButton
+      alignRight
+      title="Select group"
+      id="dropdown-menu"
+        >
+              <Dropdown.Item eventKey="option-1">option-1</Dropdown.Item>
+              <Dropdown.Item eventKey="option-2">option-2</Dropdown.Item>
+              <Dropdown.Item eventKey="option-3">option 3</Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Item eventKey="some link">some link</Dropdown.Item>
+      </DropdownButton>
+
   </Form.Group>
 {/* 
   <Form.Group controlId="formBasicPassword">
