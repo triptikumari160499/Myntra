@@ -380,9 +380,9 @@ class Style extends React.Component {
                                 <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
                             
                          
-                                <Button variant="light" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
+                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
                                 <Link to="/chat">
-                                    <Button variant="light"><i class="fas fa-share-alt"></i>                    
+                                    <Button variant="light" ><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link>
                                 <Link to="/stories">
