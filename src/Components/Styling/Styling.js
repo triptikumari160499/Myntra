@@ -10,11 +10,15 @@ import Form from "react-bootstrap/Form";
 import Form1 from "../Chat/Properties/Form";
 import swal from "sweetalert";
 import Main from "../Chatbot/mainfile";
+import Mainfile from '../Chatbot/mainfile';
 // import Chatbot from "./chatbot";
 class Style extends React.Component {
     constructor(props) {
         super(props); 
-        this.state = {modalShow : false}
+        this.state = {
+            modalShow : false,
+            chatBot : false
+        };
      } 
     render() {
         
@@ -24,9 +28,16 @@ class Style extends React.Component {
         return (
             <div id="back">
                 <header>
-                <Link to="/ChatBot">  <Button variant="light" className = "float"><i class="fas fa-robot my-float"></i>
-                                </Button>
-                                </Link>
+
+                <div className="chatbot">
+                 <Button variant="light" onClick={()=>this.setState({chatBot:!this.state.chatBot})} className = "float"><i class="fas fa-robot my-float"></i>
+                </Button>
+             
+                {this.state.chatBot?<Mainfile />:""}   
+                
+                </div>
+
+                
                     <div id="nav">
 
                         <img
