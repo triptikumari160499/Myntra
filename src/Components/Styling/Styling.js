@@ -24,6 +24,9 @@ class Style extends React.Component {
         return (
             <div id="back">
                 <header>
+                <Link to="/ChatBot">  <Button variant="light" className = "float"><i class="fas fa-robot my-float"></i>
+                                </Button>
+                                </Link>
                     <div id="nav">
 
                         <img
@@ -382,11 +385,10 @@ class Style extends React.Component {
                                     <Button variant="light"><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link>
-<<<<<<< HEAD
-        
-=======
-                                <Link to="../Chatbot/mainfile"><i class="chaticon">ChatBot</i></Link>
->>>>>>> d4fdcb46a766a07da3caeaa7bd82b1769b2b1421
+                                <Link to="/stories">
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
 

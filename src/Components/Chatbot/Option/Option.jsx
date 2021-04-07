@@ -1,6 +1,6 @@
 import React from "react";
 
-// import "./Options.css";
+import "./Option.css";
 
 const Options = (props) => {
   const options = [

@@ -20,10 +20,10 @@ function Form1(props) {
         <Form>
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Username</Form.Label>
-    <Form.Control type="email" placeholder="Enter email" />
-    <Form.Text className="text-muted">
-      We'll never share your email with anyone else.
-    </Form.Text>
+    <Form.Control type="text" placeholder="Enter Username" />
+    
+    <Form.Label>Password</Form.Label>
+    <Form.Control type="password" />
   </Form.Group>
 {/* 
   <Form.Group controlId="formBasicPassword">
@@ -34,7 +34,7 @@ function Form1(props) {
     <Form.Check type="checkbox" label="Check me out" />
   </Form.Group> */}
   <Button variant="primary" type="submit">
-    Share
+    Submit
   </Button>
 </Form>
       </Modal.Body>

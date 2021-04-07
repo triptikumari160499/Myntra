@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-  
-=======
 import React, { Component }  from 'react';
->>>>>>> d4fdcb46a766a07da3caeaa7bd82b1769b2b1421
 const MyMessage = ({ message }) => {
   if (message.attachments && message.attachments.length > 0) {
     return (

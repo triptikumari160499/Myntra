@@ -792,3 +792,20 @@ li {
     background: #fff;
     border-top: 1px solid #e9e9e9;
   }
+  .float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:20px;
+	background-color:rgb(199, 22, 140);
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:10px;
+    margin-bottom: 10px;
+}
