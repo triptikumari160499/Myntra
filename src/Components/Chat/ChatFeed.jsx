@@ -2,9 +2,10 @@ import MyMessage from './MyMessage';
 import TheirMessage from './TheirMessage';
 import MessageForm from './MessageForm';
 import Form1 from './Properties/Form';
+import { getChats } from 'react-chat-engine';
 const ChatFeed = (props) => {
   const { chats, activeChat, userName, messages } = props;
-
+ 
   const chat = chats && chats[activeChat];
 
   const renderReadReceipts = (message, isMyMessage) => chat.people.map((person, index) => person.last_read === message.id && (
@@ -17,7 +18,7 @@ const ChatFeed = (props) => {
       }}
     />
   ));
-
+ console.log( localStorage);
   const renderMessages = () => {
     const keys = Object.keys(messages);
 
@@ -33,10 +34,12 @@ const ChatFeed = (props) => {
               ? <MyMessage message={message} />
               : <TheirMessage message={message} lastMessage={messages[lastMessageKey]} />}
           </div>
+          
           <div className="read-receipts" style={{ marginRight: isMyMessage ? '18px' : '0px', marginLeft: isMyMessage ? '0px' : '68px' }}>
             {renderReadReceipts(message, isMyMessage)}
           </div>
         </div>
+        
       );
     });
   };

@@ -9,6 +9,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Form1 from "../Chat/Properties/Form";
 import swal from "sweetalert";
+import { ChatList } from 'react-chat-engine';
 class Style extends React.Component {
     constructor(props) {
         super(props); 
@@ -23,6 +24,7 @@ class Style extends React.Component {
             <div id="back">
                 <header>
                     <div id="nav">
+                    
                         <img
                             src="https://images.assettype.com/afaqs%2F2021-01%2F51966c7c-de5b-4092-ac03-e1f5e6152b32%2Fmyntra.png?auto=format%2Ccompress&w=1200"></img>
                         <div id="items">
@@ -379,6 +381,7 @@ class Style extends React.Component {
                                     <Button variant="light"><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link>
+                                
                             </div>
                         </div>
 
@@ -804,7 +807,7 @@ class Style extends React.Component {
                         Handbags | Ladies Watches | Bags | Sport Shoes |
                         Reebok Shoes | Puma Shoes | Boxers | Wallets | Tops | Earrings | Fastrack Watches | Kurtis | Nike
                         Smart Watches | Titan Watches | Designer
-                        Blouse | Gowns | Rings | Cricket Shoes | Forever 21 Eye Makeup | Photo Frames | Punjabi Suits |
+                        Blouse | Gowns | Rings | Cricket Shoes | Forever 21 Eye Makeup | 6- Frames | Punjabi Suits |
                         Bikini | Myntra Fashion Show | Lipstick |
                         Saree | Watches | Dresses | Lehenga | Nike Shoes | Goggles | Bras | Suit | Chinos Shoes | Adidas
                         Shoes | Woodland Shoes | Jewellery | Designers

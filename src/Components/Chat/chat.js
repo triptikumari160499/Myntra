@@ -1,4 +1,4 @@
-import { ChatEngine } from 'react-chat-engine';
+import { ChatCard, ChatEngine } from 'react-chat-engine';
 import './chat.css';
 import ChatFeed from './ChatFeed';
 import LoginForm from './LoginForm';
@@ -8,7 +8,6 @@ const projectID = 'dd1bb131-88b0-4213-835c-26ee5449ff0b';
 
 const Chat = () => {
   if (!localStorage.getItem('username')) return <LoginForm />;
-
   return (
     <div>
     <ChatEngine
@@ -20,6 +19,7 @@ const Chat = () => {
       onNewMessage={() => new Audio('https://chat-engine-assets.s3.amazonaws.com/click.mp3').play()}
     />
     </div>
+    
   );
 };
 
