@@ -25,7 +25,7 @@ class Style extends React.Component {
             <div id="back">
                 <header>
                     <div id="nav">
-                    
+
                         <img
                             src="https://images.assettype.com/afaqs%2F2021-01%2F51966c7c-de5b-4092-ac03-e1f5e6152b32%2Fmyntra.png?auto=format%2Ccompress&w=1200"></img>
                         <div id="items">
@@ -382,7 +382,7 @@ class Style extends React.Component {
                                     <Button variant="light"><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link>
-                                
+        
                             </div>
                         </div>
 
