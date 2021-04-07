@@ -813,8 +813,9 @@ li {
 
 
 .chatbot {
+    z-index: 1;
     bottom: 0;
     right : 10px;
-    position: fixed;
+    position: absolute;
     width: 350px;
 }
