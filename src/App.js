@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Chat from './Components/Chat/chat';
 import ChatBot from "./Components/Chatbot/mainfile";
 import Stories from "./Components/Chat/InstaStories";
+import Tables from "./Table";
 //import Form1 from './Components/Chat/Properties/Form';
 
 class App extends React.Component
@@ -33,6 +34,10 @@ class App extends React.Component
          <Route 
            exact path="/Stories" 
            component={Stories}/>
+            {/* Table Component */}
+         <Route 
+           exact path="/Tables" 
+           component={Tables}/>
      </Switch>
      </div>
      
