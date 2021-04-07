@@ -782,6 +782,7 @@ li {
 
 }
 
+
 .site-form-in-drawer-wrapper {
     position: absolute;
     right: 0px;
@@ -808,4 +809,13 @@ li {
 .my-float{
 	margin-top:10px;
     margin-bottom: 10px;
+}
+
+
+.chatbot {
+    z-index: 1;
+    bottom: 0;
+    right : 10px;
+    position: absolute;
+    width: 300px;
 }
