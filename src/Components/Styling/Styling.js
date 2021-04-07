@@ -9,8 +9,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Form1 from "../Chat/Properties/Form";
 import swal from "sweetalert";
-
-//import Chatbot from "./chatbot";
+import Main from "../Chatbot/mainfile";
+// import Chatbot from "./chatbot";
 class Style extends React.Component {
     constructor(props) {
         super(props); 
@@ -382,7 +382,11 @@ class Style extends React.Component {
                                     <Button variant="light"><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link>
+<<<<<<< HEAD
         
+=======
+                                <Link to="../Chatbot/mainfile"><i class="chaticon">ChatBot</i></Link>
+>>>>>>> d4fdcb46a766a07da3caeaa7bd82b1769b2b1421
                             </div>
                         </div>
 

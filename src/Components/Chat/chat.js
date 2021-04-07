@@ -4,6 +4,8 @@ import ChatFeed from './ChatFeed';
 import LoginForm from './LoginForm';
 //import './App.css';
 // import Main from '../Main/main';
+import React, { Component }  from 'react';
+
 const projectID = 'dd1bb131-88b0-4213-835c-26ee5449ff0b';
 
 const Chat = () => {
