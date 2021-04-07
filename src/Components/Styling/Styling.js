@@ -66,7 +66,9 @@ class Style extends React.Component {
 
                         <div id="profile">
                             <i id="pro" class="ri-account-pin-circle-line">
-                                <div id="line"></div>
+                                <div id="line">
+                                    
+                                </div>
                             </i>
                             <i class="ri-star-line"></i>
                             {/* Links to the Chat Component */}
@@ -380,7 +382,7 @@ class Style extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <h1>TRENDING IN WESTERN WEAR</h1>
+                    <h1>WESTERN WEAR</h1>
                     <div id="western">
                         <div id="western1">
                             <div class="westernimg">
@@ -392,10 +394,10 @@ class Style extends React.Component {
                             
                          
                                 <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
-                                <Link to="/chat">
+                                 {/* <Link to="/chat">
                                     <Button variant="light" ><i class="fas fa-share-alt"></i>                    
                                     </Button>
-                                </Link>
+                                </Link> */}
                                 <Link to="/stories">
                                     <Button variant="light"><i class="fas fa-insta">Insta</i>                    
                                     </Button>
@@ -408,11 +410,39 @@ class Style extends React.Component {
                                 <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/8/20/5b3b3f9a-d893-4f15-9e1c-c7667bca41091597912691188-Content-westerncasual-trend-superhero.jpg"
                                     alt=""></img>
                             </div>
+                            <div class="card-link-div ">
+                                <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
+                            
+                         
+                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
+                                  {/* <Link to="/chat">
+                                    <Button variant="light" ><i class="fas fa-share-alt"></i>                    
+                                    </Button>
+                                </Link> */} 
+                                <Link to="/stories">
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    </Button>
+                                </Link>
+                            </div>
                         </div>
                         <div class="westernimg">
                             <div id="western3">
                                 <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/d53a46d7-e8f8-4f7e-9e1a-6cb997d1a1e51597840566613-Content-westerncasual-brand-modarapidoskinnyjeans.jpg"
                                     alt=""></img>
+                            </div>
+                            <div class="card-link-div ">
+                                <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
+                            
+                         
+                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
+                                 {/* <Link to="/chat">
+                                    <Button variant="light" ><i class="fas fa-share-alt"></i>                    
+                                    </Button>
+                                </Link> */}
+                                <Link to="/stories">
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                         <div id="western4">
@@ -420,11 +450,39 @@ class Style extends React.Component {
                                 <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/b85eb6be-0223-4cca-bc81-56ca3089daf11597841355970-Content-westernwear-Essentials-Women-s-Trousers--copy--.jpg"
                                     alt=""></img>
                             </div>
+                            <div class="card-link-div ">
+                                <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
+                            
+                         
+                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
+                                 {/* <Link to="/chat">
+                                    <Button variant="light" ><i class="fas fa-share-alt"></i>                    
+                                    </Button>
+                                </Link> */}
+                                <Link to="/stories">
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    </Button>
+                                </Link>
+                            </div>
                         </div>
                         <div id="western5">
                             <div class="westernimg">
                                 <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/8/20/5b3b3f9a-d893-4f15-9e1c-c7667bca41091597912691188-Content-westerncasual-trend-superhero.jpg"
                                     alt=""></img>
+                            </div>
+                            <div class="card-link-div ">
+                                <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
+                            
+                         
+                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
+                                 {/* <Link to="/chat">
+                                    <Button variant="light" ><i class="fas fa-share-alt"></i>                    
+                                    </Button>
+                                </Link> */}
+                                <Link to="/stories">
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -434,11 +492,39 @@ class Style extends React.Component {
                                 <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/f7585d6d-78ee-42bd-baf2-07eefada7fb31597840566666-Content-westerncasual-color-moss.jpg"
                                     alt=""></img>
                             </div>
+                            <div class="card-link-div ">
+                                <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
+                            
+                         
+                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
+                                 {/* <Link to="/chat">
+                                    <Button variant="light" ><i class="fas fa-share-alt"></i>                    
+                                    </Button>
+                                </Link> */}
+                                <Link to="/stories">
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    </Button>
+                                </Link>
+                            </div>
                         </div>
                         <div id="western2b">
                             <div class="westernimg">
                                 <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/d7f59b96-8e15-470e-a47b-5d5005e4273f1597840566776-Content-westerncasual-mostselling-modblocking.jpg"
                                     alt=""></img>
+                            </div>
+                            <div class="card-link-div ">
+                                <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
+                            
+                         
+                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
+                                 {/* <Link to="/chat">
+                                    <Button variant="light" ><i class="fas fa-share-alt"></i>                    
+                                    </Button>
+                                </Link> */}
+                                <Link to="/stories">
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                         <div id="western2c">
@@ -446,17 +532,59 @@ class Style extends React.Component {
                                 <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/8/19/8116410f-af2c-4980-95ef-04a4162092491597840566722-Content-westerncasual-color-preppyred.jpg"
                                     alt=""></img>
                             </div>
+                            <div class="card-link-div ">
+                                <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
+                            
+                         
+                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
+                                 {/* <Link to="/chat">
+                                    <Button variant="light" ><i class="fas fa-share-alt"></i>                    
+                                    </Button>
+                                </Link> */}
+                                <Link to="/stories">
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    </Button>
+                                </Link>
+                            </div>
                         </div>
                         <div id="western2d">
                             <div class="westernimg">
                                 <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/retaillabs/2020/8/21/580b804c-c529-421c-b0be-b311cab6e10b1598030134933-Content-mostselling-casualwear-Normalisboring.jpg"
                                     alt=""></img>
                             </div>
+                            <div class="card-link-div ">
+                                <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
+                            
+                         
+                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
+                                 {/* <Link to="/chat">
+                                    <Button variant="light" ><i class="fas fa-share-alt"></i>                    
+                                    </Button>
+                                </Link> */}
+                                <Link to="/stories">
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    </Button>
+                                </Link>
+                            </div>
                         </div>
                         <div id="western2e">
                             <div class="westernimg">
                                 <img src="https://assets.myntassets.com/f_webp,w_196,c_limit,fl_progressive,dpr_2.0/assets/images/2020/7/28/a6d9d467-d37e-4428-b2dd-a9f45756c1fc1595936000278-Content-westernwear-lifestyle-Ecovero.jpg"
                                     alt=""></img>
+                            </div>
+                            <div class="card-link-div ">
+                                <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
+                            
+                         
+                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
+                                 {/* <Link to="/chat">
+                                    <Button variant="light" ><i class="fas fa-share-alt"></i>                    
+                                    </Button>
+                                </Link> */}
+                                <Link to="/stories">
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                     </div>
