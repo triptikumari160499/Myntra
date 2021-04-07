@@ -9,6 +9,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Form1 from "../Chat/Properties/Form";
 import swal from "sweetalert";
+
+//import Chatbot from "./chatbot";
 class Style extends React.Component {
     constructor(props) {
         super(props); 
