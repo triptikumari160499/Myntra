@@ -1,8 +1,9 @@
 import React from "react";
-import {Table} from "antd";
+import {Tag, Divider,Table} from "antd";
 import 'antd/dist/antd.css';
 import Style from "./Components/Styling/Styling";
-const columns = [{
+const columns = [
+  {
   title: 'Product',
   dataIndex: 'Product',
   key: 'Product',
@@ -15,9 +16,24 @@ const columns = [{
          <div>{record.productnumber}</div>
          <a href="javascript:alert('Check');">{record.productname}</a>
          </div>
-    );},
+    );
+  }
+    ,
   }, 
-
+  {
+    title: 'Details',
+    dataIndex: 'tags',
+    key: 'Details',
+    render: (text,record)=>{
+      return(
+        // Styling is donee here (Capital case dark shade, Small case light shade)
+        <div>
+        {record.tags.map((tag)=> <Tag color={record.tags[1]}>{tag}</Tag>)}
+        </div>
+      );
+    }
+    ,
+  },
   {
     title: 'Sender',
     dataIndex: 'Sender', 
@@ -55,7 +71,7 @@ const data = [{
   Sender:'Tripti',
   address: 'New York No. 1 Lake Park',
   age: 32,
-  Tags: ['M', 'Blue'],
+  tags: ['M', 'Blue'],
   Delete: 'Delete',
   }, 
   {
@@ -66,7 +82,7 @@ const data = [{
   Sender:'Tripti',
   address: 'New York No. 1 Lake Park',
   age: 32,
-  tags: ['XL', 'orange'],
+  tags: ['XL', 'Orange'],
   Delete: 'Delete',
   }, 
   {
@@ -77,6 +93,7 @@ const data = [{
   Sender:'Tripti',
   address: 'New York No. 1 Lake Park',
   age: 32,
+  tags: ['M', 'Red'],
   Delete: 'Delete',
   }, 
   {
@@ -86,6 +103,7 @@ const data = [{
   productname:'AAAAA',
   Sender:'Tripti',
   address: 'New York No. 1 Lake Park',
+  tags: ['L', 'Green'],
   age: 32,
   Delete: 'Delete',
 }];
