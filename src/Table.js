@@ -2,9 +2,11 @@ import React from "react";
 import {Tag, Divider,Table} from "antd";
 import 'antd/dist/antd.css';
 import Style from "./Components/Styling/Styling";
-//import { Button } from "bootstrap";
+// import { Button } from "bootstrap";
 import Button from "react-bootstrap/Button";
 import './cust.css';
+
+
 
 const columns = [
   {
@@ -49,7 +51,9 @@ const columns = [
         <div class="container">
           <div class="row spacing">
             <div class="col-xs-4">
-            <Button onClick>Upvote</Button> 
+            <Button onClick={() => {record.polls['up']+=1}
+            }>Upvote</Button> 
+            {console.log(record.polls['up'])}
             </div>
             <div class="col-xs-4 colspace">
             {record.polls['up']}
@@ -58,7 +62,7 @@ const columns = [
 
         <div class="row spacing">
             <div class="col-xs-4 ">
-            <Button>Downvote</Button> 
+            <Button onClick={() => record.polls['down']+=1}>Downvote</Button> 
             </div>
             <div class="col-xs-4 colspace">
             {record.polls['down']}
