@@ -43,21 +43,21 @@ class Style extends React.Component {
                         <img
                             src="https://images.assettype.com/afaqs%2F2021-01%2F51966c7c-de5b-4092-ac03-e1f5e6152b32%2Fmyntra.png?auto=format%2Ccompress&w=1200"></img>
                         <div id="items">
-                            <h4 id="one">MEN
-                        <div id="line"></div>
-                            </h4>
-                            <h4 id="two">WOMEN
-                        <div id="line"></div>
-                            </h4>
-                            <h4 id="three">KIDS
-                        <div id="line"></div>
-                            </h4>
-                            <h4 id="four">HOME & LIVING
-                        <div id="line"></div>
-                            </h4>
-                            <h4 id="five">OFFERS
-                        <div id="line"></div>
-                            </h4>
+                            <h5 className="one">MEN
+                        <div className="line"></div>
+                            </h5>
+                            <h5 className="one">WOMEN
+                        <div className="line"></div>
+                            </h5>
+                            <h5 className="one">KIDS
+                        <div className="line"></div>
+                            </h5>
+                            <h5 className="one">HOME & LIVING
+                        <div className="line"></div>
+                            </h5>
+                            <h5 className="one">OFFERS
+                        <div className="line"></div>
+                            </h5>
                         </div>
                         <div id="searchbar">
                             <i class="ri-search-line"></i>
