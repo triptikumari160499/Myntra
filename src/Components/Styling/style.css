@@ -13,13 +13,17 @@ body {
     overflow-x: hidden;
 }
 
-#back {
+#container {
     width: 100%;
     height: 100%;
     background-color: #fff;
 }
 
+
+/* Header File*/
+
 #nav {
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +32,7 @@ body {
     background-color: #fff;
     padding: 10px 40px;
     position: fixed;
-    z-index: 99999;
+    z-index: 1;     
 }
 
 #nav img {
@@ -39,29 +43,32 @@ body {
 }
 
 #items {
-    display: flex;
+    display: contents;
     justify-content: space-between;
     color: black;
-    font-size: 10px;
+    font-size: 17px;
     font-weight: bolder;
     font-family: "Graphik";
-    margin-left: 10px;
-    margin-top: 30px;
     cursor: pointer;
 }
 
-#items h4 {
-    margin-left: 40px;
-}
 
-#items .one {
-    margin: 20px;
-    margin-bottom: 40px;
+#items .nav_item {
+    padding: 0 17px 28px;
+    font-family: "Graphik";
+    font-size: 14px;
+    color: #282c3f;
+    letter-spacing: .3px;
+    padding: 0 17px 28px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 
 #searchbar {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     width: 400px;
     height: 40px;
@@ -106,87 +113,9 @@ body {
     margin-left: 180px;
 }
 
-#line {
-    border-bottom: 3px solid transparent;
-    border-radius: 3px;
-    margin-top: 30px;
-}
-
-#one:hover #line {
-    border-bottom: 3px solid rgb(230, 48, 48);
-}
-
-#two:hover #line {
-    border-bottom: 3px solid rgb(211, 70, 169);
-}
-
-#three:hover #line {
-    border-bottom: 3px solid rgb(233, 86, 27);
-}
-
-#four:hover #line {
-    border-bottom: 3px solid rgb(236, 222, 17);
-}
-
-#five:hover #line {
-    border-bottom: 3px solid rgb(40, 181, 236);
-}
 
 #pro:hover #line {
     border-bottom: 3px solid rgb(230, 48, 48);
-}
-
-#overlay {
-    width: 100%;
-    height: 380px;
-    background-color: rgba(231, 230, 230, 0.678);
-}
-
-#main {
-    position: absolute;
-    width: 1330px;
-    height: 350px;
-    padding: 20px;
-    background-color: rgba(231, 230, 230, 0.678);
-}
-
-.elem img {
-    position: absolute;
-    width: 100%;
-    height: 350px;
-    background-position: center;
-    background-size: cover;
-    margin-top: 70px;
-}
-
-#b img {
-    left: -100%;
-    animation: slide 10s linear 20s infinite both;
-    z-index: 998;
-}
-
-#c img {
-    left: -200%;
-    animation: slideleft 20s linear 30s infinite both;
-    z-index: 999;
-}
-
-@keyframes slide {
-    from {
-        left: 0;
-    }
-    to {
-        right: 100%
-    }
-}
-
-@keyframes slideleft {
-    from {
-        left: 0;
-    }
-    to {
-        right: 100%;
-    }
 }
 
 h1 {
