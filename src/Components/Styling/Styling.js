@@ -6,6 +6,7 @@ import {
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import './style.css';
 import Button from "react-bootstrap/Button";
+import Dropdown from "react-bootstrap/Dropdown";
 import Form from "react-bootstrap/Form";
 import Form1 from "../Chat/Properties/Form";
 import swal from "sweetalert";
@@ -14,14 +15,14 @@ import Mainfile from '../Chatbot/mainfile';
 // import Chatbot from "./chatbot";
 class Style extends React.Component {
     constructor(props) {
-        super(props); 
+        super(props);
         this.state = {
-            modalShow : false,
-            chatBot : false
+            modalShow: false,
+            chatBot: false
         };
-     } 
+    }
     render() {
-        
+
         const share = () => {
             swal("Good job!", "You clicked the button!", "success");
         }
@@ -29,15 +30,15 @@ class Style extends React.Component {
             <div id="back">
                 <header>
 
-                <div className="chatbot">
-                 <Button variant="light" onClick={()=>this.setState({chatBot:!this.state.chatBot})} className = "float"><i class="fas fa-robot my-float"></i>
-                </Button>
-             
-                {this.state.chatBot?<Mainfile />:""}   
-                
-                </div>
+                    <div className="chatbot">
+                        <Button variant="light" onClick={() => this.setState({ chatBot: !this.state.chatBot })} className="float"><i class="fas fa-robot my-float"></i>
+                        </Button>
 
-                
+                        {this.state.chatBot ? <Mainfile /> : ""}
+
+                    </div>
+
+
                     <div id="nav">
 
                         <img
@@ -67,7 +68,7 @@ class Style extends React.Component {
                         <div id="profile">
                             <i id="pro" class="ri-account-pin-circle-line">
                                 <div id="line">
-                                    
+
                                 </div>
                             </i>
                             <i class="ri-star-line"></i>
@@ -75,7 +76,7 @@ class Style extends React.Component {
                             <Link to="/chat"><i class="chaticon">Chat</i></Link>
 
                             <div>
-            
+
 
                                 {/* <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
@@ -121,12 +122,12 @@ class Style extends React.Component {
                             </div>
                         </div>
 
-                    </div>            
+                    </div>
                     {/* This renders the modal form, when the friends button is clicked see below the modalShow is set to True */}
-                        <Form1
-                            show={this.state.modalShow}
-                            onHide= {() => this.setState({modalShow:false})}
-                        />
+                    <Form1
+                        show={this.state.modalShow}
+                        onHide={() => this.setState({ modalShow: false })}
+                    />
 
                     <h1>DEALS OF THE DAY</h1>
                     <div id="deals">
@@ -137,8 +138,8 @@ class Style extends React.Component {
                                     alt=""></img>
 
                             </div>
-                            
-                           
+
+
                         </div>
 
                         <div id="deals2">
@@ -391,17 +392,30 @@ class Style extends React.Component {
                             </div>
                             <div class="card-link-div ">
                                 <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
-                            
-                         
-                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
-                                 {/* <Link to="/chat">
+
+
+                                   <Dropdown>
+                                <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                    <i class="fas fa-user-friends"></i>
+                                    
+                          
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Myntra</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Chat</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                </Dropdown.Menu>
+                                </Dropdown>
+                            {/* <Link to="/chat">
                                     <Button variant="light" ><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link> */}
-                                <Link to="/stories">
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
-                                    </Button>
-                                </Link>
+                            <Link to="/stories">
+                                <Button variant="light"><i class="fas fa-insta">Insta</i>
+                                </Button>
+                            </Link>
+  
                             </div>
                         </div>
 
@@ -412,15 +426,27 @@ class Style extends React.Component {
                             </div>
                             <div class="card-link-div ">
                                 <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
-                            
-                         
-                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
-                                  {/* <Link to="/chat">
+
+
+                                
+                                   <Dropdown>
+                                <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                    <i class="fas fa-user-friends"></i>
+                                    
+                          
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Myntra</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Chat</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                </Dropdown.Menu>
+                                </Dropdown>   {/* <Link to="/chat">
                                     <Button variant="light" ><i class="fas fa-share-alt"></i>                    
                                     </Button>
-                                </Link> */} 
+                                </Link> */}
                                 <Link to="/stories">
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
                                     </Button>
                                 </Link>
                             </div>
@@ -432,15 +458,27 @@ class Style extends React.Component {
                             </div>
                             <div class="card-link-div ">
                                 <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
-                            
-                         
-                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
-                                 {/* <Link to="/chat">
+
+
+                                
+                                   <Dropdown>
+                                <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                    <i class="fas fa-user-friends"></i>
+                                    
+                          
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Myntra</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Chat</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                </Dropdown.Menu>
+                                </Dropdown>   {/* <Link to="/chat">
                                     <Button variant="light" ><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
                                     </Button>
                                 </Link>
                             </div>
@@ -452,15 +490,27 @@ class Style extends React.Component {
                             </div>
                             <div class="card-link-div ">
                                 <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
-                            
-                         
-                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
-                                 {/* <Link to="/chat">
+
+
+                                
+                                   <Dropdown>
+                                <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                    <i class="fas fa-user-friends"></i>
+                                    
+                          
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Myntra</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Chat</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                </Dropdown.Menu>
+                                </Dropdown>   {/* <Link to="/chat">
                                     <Button variant="light" ><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
                                     </Button>
                                 </Link>
                             </div>
@@ -472,15 +522,27 @@ class Style extends React.Component {
                             </div>
                             <div class="card-link-div ">
                                 <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
-                            
-                         
-                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
-                                 {/* <Link to="/chat">
+
+
+                                
+                                   <Dropdown>
+                                <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                    <i class="fas fa-user-friends"></i>
+                                    
+                          
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Myntra</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Chat</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                </Dropdown.Menu>
+                                </Dropdown>   {/* <Link to="/chat">
                                     <Button variant="light" ><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
                                     </Button>
                                 </Link>
                             </div>
@@ -494,15 +556,27 @@ class Style extends React.Component {
                             </div>
                             <div class="card-link-div ">
                                 <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
-                            
-                         
-                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
-                                 {/* <Link to="/chat">
+
+
+                                
+                                   <Dropdown>
+                                <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                    <i class="fas fa-user-friends"></i>
+                                    
+                          
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Myntra</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Chat</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                </Dropdown.Menu>
+                                </Dropdown>   {/* <Link to="/chat">
                                     <Button variant="light" ><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
                                     </Button>
                                 </Link>
                             </div>
@@ -514,15 +588,27 @@ class Style extends React.Component {
                             </div>
                             <div class="card-link-div ">
                                 <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
-                            
-                         
-                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
-                                 {/* <Link to="/chat">
+
+
+                                
+                                   <Dropdown>
+                                <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                    <i class="fas fa-user-friends"></i>
+                                    
+                          
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Myntra</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Chat</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                </Dropdown.Menu>
+                                </Dropdown>   {/* <Link to="/chat">
                                     <Button variant="light" ><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
                                     </Button>
                                 </Link>
                             </div>
@@ -534,15 +620,27 @@ class Style extends React.Component {
                             </div>
                             <div class="card-link-div ">
                                 <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
-                            
-                         
-                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
-                                 {/* <Link to="/chat">
+
+
+                                
+                                   <Dropdown>
+                                <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                    <i class="fas fa-user-friends"></i>
+                                    
+                          
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Myntra</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Chat</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                </Dropdown.Menu>
+                                </Dropdown>   {/* <Link to="/chat">
                                     <Button variant="light" ><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
                                     </Button>
                                 </Link>
                             </div>
@@ -554,15 +652,27 @@ class Style extends React.Component {
                             </div>
                             <div class="card-link-div ">
                                 <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
-                            
-                         
-                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
-                                 {/* <Link to="/chat">
+
+
+                                
+                                   <Dropdown>
+                                <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                    <i class="fas fa-user-friends"></i>
+                                    
+                          
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Myntra</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Chat</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                </Dropdown.Menu>
+                                </Dropdown>   {/* <Link to="/chat">
                                     <Button variant="light" ><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
                                     </Button>
                                 </Link>
                             </div>
@@ -574,15 +684,27 @@ class Style extends React.Component {
                             </div>
                             <div class="card-link-div ">
                                 <Button variant="light" style={{ cursor: "pointer" }} onClick={share} class="card-link"><i class="far fa-heart"></i></Button>
-                            
-                         
-                                <Button variant="light" id="button" onClick={()=> this.setState({modalShow:true})} class="card-link"><i class="fas fa-user-friends"></i></Button>
-                                 {/* <Link to="/chat">
+
+
+                                
+                                   <Dropdown>
+                                <Dropdown.Toggle variant="light" id="dropdown-basic">
+                                    <i class="fas fa-user-friends"></i>
+                                    
+                          
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/action-1">Myntra</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Chat</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                </Dropdown.Menu>
+                                </Dropdown>   {/* <Link to="/chat">
                                     <Button variant="light" ><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>                    
+                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
                                     </Button>
                                 </Link>
                             </div>

@@ -7,7 +7,8 @@ import Quiz from './Quiz/Quiz';
 const config = {
   botName: "LearningBot",
   initialMessages: [
-    createChatBotMessage(`Hello. What do you want to learn`, {
+    createChatBotMessage(`Hello. Hope you are in great health!`),
+    createChatBotMessage('So What are you looking for??', {
       widget: "options",
     }),
   ],
