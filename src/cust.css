@@ -1,0 +1,10 @@
+.spacing{
+    margin: 10px 5px 5px 10px;
+    display: flex ;
+    flex-direction:row;
+}
+
+.colspace{
+    position: absolute;
+  right: 6em;
+}

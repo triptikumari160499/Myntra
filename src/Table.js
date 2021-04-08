@@ -2,6 +2,10 @@ import React from "react";
 import {Tag, Divider,Table} from "antd";
 import 'antd/dist/antd.css';
 import Style from "./Components/Styling/Styling";
+//import { Button } from "bootstrap";
+import Button from "react-bootstrap/Button";
+import './cust.css';
+
 const columns = [
   {
   title: 'Product',
@@ -32,6 +36,38 @@ const columns = [
         </div>
       );
     }
+    ,
+  },
+  {
+    title: 'User Polls',
+    dataIndex: 'polls',
+    key: 'Polls',
+    render: (text,record)=>{
+      return(
+        // Styling is donee here (Capital case dark shade, Small case light shade)
+     
+        <div class="container">
+          <div class="row spacing">
+            <div class="col-xs-4">
+            <Button onClick>Upvote</Button> 
+            </div>
+            <div class="col-xs-4 colspace">
+            {record.polls['up']}
+            </div>
+        </div>
+
+        <div class="row spacing">
+            <div class="col-xs-4 ">
+            <Button>Downvote</Button> 
+            </div>
+            <div class="col-xs-4 colspace">
+            {record.polls['down']}
+            </div>
+        </div>
+
+          </div>    
+      );
+     }
     ,
   },
   {
@@ -73,6 +109,9 @@ const data = [{
   age: 32,
   tags: ['M', 'Blue'],
   Delete: 'Delete',
+  polls:{
+    up:0,down:0
+  },
   }, 
   {
   key: '2',
@@ -84,7 +123,10 @@ const data = [{
   age: 32,
   tags: ['XL', 'Orange'],
   Delete: 'Delete',
-  }, 
+  polls:{
+    up:0,down:0
+  },  
+}, 
   {
   key: '3',
   productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/productimage/2020/1/11/eb462dc3-eee9-4e28-ad71-07dc4c6410961578698196717-1.jpg',
@@ -95,7 +137,10 @@ const data = [{
   age: 32,
   tags: ['M', 'Red'],
   Delete: 'Delete',
-  }, 
+  polls:{
+    up:0,down:0
+  },  
+}, 
   {
   key: '4',
   productimage:'https://assets.myntassets.com/fl_progressive/q_80,w_150/v1/assets/images/8802271/2019/2/25/4265862d-956f-44a3-80b0-89147b9fe18b1551097050778-StyleStone-Womens-Tie-up-Rainbow-Print-Maxi-dress-4391551097-1.jpg',
@@ -106,6 +151,9 @@ const data = [{
   tags: ['L', 'Green'],
   age: 32,
   Delete: 'Delete',
+  polls:{
+    up:0,down:0
+  },
 }];
   const Tables=()=>{
     return <Table dataSource={data} columns={columns} />;
