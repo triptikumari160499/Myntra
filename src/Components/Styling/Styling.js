@@ -411,10 +411,7 @@ class Style extends React.Component {
                                     <Button variant="light" ><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link> */}
-                            <Link to="/stories">
-                                <Button variant="light"><i class="fas fa-insta">Insta</i>
-                                </Button>
-                            </Link>
+                        
 
                                 <Link to="/stories">
                                     <Button variant="light"><i class="fas fa-insta"><i class="fab fa-instagram"></i></i>                    
@@ -450,11 +447,11 @@ class Style extends React.Component {
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-<<<<<<< HEAD
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
-=======
+
+                                    
+
                                     <Button variant="light"><i class="fas fa-insta"><i class="fab fa-instagram"></i></i>                    
->>>>>>> 63e613ee6c7f26d2f6702e030822cc5247ed36ff
+
                                     </Button>
                                 </Link>
                             </div>
@@ -486,11 +483,10 @@ class Style extends React.Component {
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-<<<<<<< HEAD
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
-=======
+                                    
+
                                     <Button variant="light"><i class="fas fa-insta"><i class="fab fa-instagram"></i></i>                    
->>>>>>> 63e613ee6c7f26d2f6702e030822cc5247ed36ff
+
                                     </Button>
                                 </Link>
                             </div>
@@ -522,12 +518,12 @@ class Style extends React.Component {
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-<<<<<<< HEAD
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
-=======
+
+
                                     <Button variant="light"><i class="fas fa-insta"><i class="fab fa-instagram"></i></i>                    
->>>>>>> 63e613ee6c7f26d2f6702e030822cc5247ed36ff
+
                                     </Button>
+
                                 </Link>
                             </div>
                         </div>
@@ -558,11 +554,9 @@ class Style extends React.Component {
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-<<<<<<< HEAD
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
-=======
-                                    <Button variant="light"><i class="fas fa-insta"><i class="fab fa-instagram"></i></i>                    
->>>>>>> 63e613ee6c7f26d2f6702e030822cc5247ed36ff
+
+                                    
+                                   <Button variant="light"><i class="fas fa-insta"><i class="fab fa-instagram"></i></i>                    
                                     </Button>
                                 </Link>
                             </div>
@@ -596,12 +590,10 @@ class Style extends React.Component {
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-<<<<<<< HEAD
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
-=======
+
+                                    
                                     <Button variant="light"><i class="fas fa-insta"><i class="fab fa-instagram"></i></i>                    
->>>>>>> 63e613ee6c7f26d2f6702e030822cc5247ed36ff
-                                    </Button>
+                                  </Button>
                                 </Link>
                             </div>
                         </div>
@@ -632,11 +624,11 @@ class Style extends React.Component {
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-<<<<<<< HEAD
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
-=======
+
+                                    
+
                                     <Button variant="light"><i class="fas fa-insta"><i class="fab fa-instagram"></i></i>                    
->>>>>>> 63e613ee6c7f26d2f6702e030822cc5247ed36ff
+
                                     </Button>
                                 </Link>
                             </div>
@@ -668,11 +660,11 @@ class Style extends React.Component {
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-<<<<<<< HEAD
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
-=======
+
+                                    
+
                                     <Button variant="light"><i class="fas fa-insta"><i class="fab fa-instagram"></i></i>                    
->>>>>>> 63e613ee6c7f26d2f6702e030822cc5247ed36ff
+
                                     </Button>
                                 </Link>
                             </div>
@@ -704,11 +696,11 @@ class Style extends React.Component {
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-<<<<<<< HEAD
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
-=======
+
+                                    
+
                                     <Button variant="light"><i class="fas fa-insta"><i class="fab fa-instagram"></i></i>                    
->>>>>>> 63e613ee6c7f26d2f6702e030822cc5247ed36ff
+
                                     </Button>
                                 </Link>
                             </div>
@@ -740,11 +732,11 @@ class Style extends React.Component {
                                     </Button>
                                 </Link> */}
                                 <Link to="/stories">
-<<<<<<< HEAD
-                                    <Button variant="light"><i class="fas fa-insta">Insta</i>
-=======
+
+                                    
+
                                     <Button variant="light"><i class="fas fa-insta"><i class="fab fa-instagram"></i></i>                    
->>>>>>> 63e613ee6c7f26d2f6702e030822cc5247ed36ff
+
                                     </Button>
                                 </Link>
                             </div>
