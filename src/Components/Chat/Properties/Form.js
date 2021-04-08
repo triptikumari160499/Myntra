@@ -32,9 +32,9 @@ function Form1(props) {
       title="Select group"
       id="dropdown-menu"
         >
-              <Dropdown.Item eventKey="option-1">option-1</Dropdown.Item>
-              <Dropdown.Item eventKey="option-2">option-2</Dropdown.Item>
-              <Dropdown.Item eventKey="option-3">option 3</Dropdown.Item>
+              <Dropdown.Item eventKey="option-1">Group1</Dropdown.Item>
+              <Dropdown.Item eventKey="option-2">Group2</Dropdown.Item>
+              <Dropdown.Item eventKey="option-3">Group3</Dropdown.Item>
               <Dropdown.Divider />
               <Dropdown.Item eventKey="some link">some link</Dropdown.Item>
       </DropdownButton>

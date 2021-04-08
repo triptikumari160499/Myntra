@@ -7,10 +7,10 @@ import { getChats } from 'react-chat-engine';
 import React, { Component }  from 'react';
 
 const ChatFeed = (props) => {
+  // console.log({props})
   const { chats, activeChat, userName, messages } = props;
- 
+  
   const chat = chats && chats[activeChat];
-
   const renderReadReceipts = (message, isMyMessage) => chat.people.map((person, index) => person.last_read === message.id && (
     <div
       key={`read_${index}`}
