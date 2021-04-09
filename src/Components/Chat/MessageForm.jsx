@@ -52,10 +52,10 @@ const MessageForm = (props) => {
         onChange={handleUpload.bind(this)}
       />
       <button type="submit" className="send-button">
-        <SendOutlined className="send-icon" />
+      <i  class = "fas fa-share-square"></i>
       </button>
       {/* Link to Wishlist page */}
-      <Button type="submit">Wishlist</Button>
+      <Button variant = "light" type="submit" className = "wishlist"><i  class = "fas fa-shopping-bag"></i></Button>
     </form>
   );
 };

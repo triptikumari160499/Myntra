@@ -28,7 +28,7 @@ const Chat = () => {
       onNewMessage={() => new Audio('https://chat-engine-assets.s3.amazonaws.com/click.mp3').play()}
     />
     
-    <Link to="/Tables">  <Button variant="light" className = "float"><i class="fas fa-robot my-float"></i>
+    <Link to="/Tables">  <Button variant="light" className = "float"><i class="fas fa-database my-float"></i>
                                 </Button>
                                 </Link>
     </div>
