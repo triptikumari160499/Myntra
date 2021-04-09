@@ -13,7 +13,7 @@ const ChatBot = () => {
           >
             <i class="fas fa-robot my-float"></i>
           </Button>
-          {chatBot ? <Mainfile /> : ""}
+          {chatBot ? <Mainfile /> : null}
         </div>
     )
 }

@@ -146,7 +146,7 @@ const Tables=()=>{
     Sender:'Tripti',
     address: 'New York No. 1 Lake Park',
     age: 32,
-    tags: ['S', 'Red'],
+    tags: ['M', 'Red'],
     Delete: 'Delete',
     polls:{
       up:0,down:0
