@@ -7,15 +7,81 @@ import Button from "react-bootstrap/Button";
 import './cust.css';
 
 const Tables=()=>{
-  const UpVoteHandler = () =>{
-    setUpNumber(UpNumber+1)
+  const VoteHandler = (record,type) =>{
+    let newArr=[...data]; // copy of existing data
+    data.forEach(element => {
+      if(element['key']==record['key'])   // find the button to update state
+      {
+        if(type==0)
+        element['polls']['up']+=1;
+        else
+        element['polls']['down']+=1;
+      }
+      setUpVote(newArr); // set the Changed state
+    });
+   // console.log(record);
   }
-  const DownVoteHandler = () =>{
-    setDownNumber(DownNumber+1)
-  }
+  // const DownVoteHandler = () =>{
+  //   setDownNumber(DownNumber+1)
+  // }
   
-  const [UpNumber,setUpNumber] = useState(0);
-  const [DownNumber,setDownNumber] = useState(0);
+  const [data,setUpVote] = useState([{
+    key: '1',
+    productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/7488102/2019/8/22/8002a744-0dad-4dbb-9481-cf0090134c3b1566454086786-Dennis-Lingo-Men-Pink-Slim-Fit-Solid-Casual-Shirt-9891566454-1.jpg',
+    productnumber:'Dennis Lingo',
+    productname:'Men Slim Fit Casual Shirt',
+    Sender:'Tripti',
+    address: 'New York No. 1 Lake Park',
+    age: 32,
+    tags: ['M', 'Pink'],
+    Delete: 'Delete',
+    polls:{
+      up:0,down: 0
+    },
+    }, 
+    {
+    key: '2',
+    productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/2414313/2018/3/13/11520926368526-HERENOW-Men-Red--Black-Regular-Fit-Checked-Casual-Shirt-8881520926368447-1.jpg',
+    productnumber:'HERE&NOW',
+    productname:'Men Red & Black Regular Fit Checked Casual Shirt',
+    Sender:'Tripti',
+    address: 'New York No. 1 Lake Park',
+    age: 32,
+    tags: ['XL', 'Red'],
+    Delete: 'Delete',
+    polls:{
+      up:0,down: 0
+    },  
+  }, 
+    {
+    key: '3',
+    productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/productimage/2020/1/11/eb462dc3-eee9-4e28-ad71-07dc4c6410961578698196717-1.jpg',
+    productnumber:'Athena',
+    productname:'Women Burgundy & Brown Embellished Sheath Dress',
+    Sender:'Tripti',
+    address: 'New York No. 1 Lake Park',
+    age: 32,
+    tags: ['M', 'Silver'],
+    Delete: 'Delete',
+    polls:{
+      up:0,down: 0
+    },  
+  }, 
+    {
+    key: '4',
+    productimage:'https://assets.myntassets.com/fl_progressive/q_80,w_150/v1/assets/images/8802271/2019/2/25/4265862d-956f-44a3-80b0-89147b9fe18b1551097050778-StyleStone-Womens-Tie-up-Rainbow-Print-Maxi-dress-4391551097-1.jpg',
+    productnumber:'StyleStone',
+    productname:'Rainbow Print Tie-Up Midi Dress',
+    Sender:'Tripti',
+    address: 'New York No. 1 Lake Park',
+    tags: ['L', 'Orange'],
+    age: 32,
+    Delete: 'Delete',
+    polls:{
+      up: 0,down: 0
+    },
+  }]);
+  // const [data,setDownNumber] = useState(data);
   const columns = [
     {
     title: 'Product',
@@ -40,7 +106,7 @@ const Tables=()=>{
       key: 'Details',
       render: (text,record)=>{
         return(
-          // Styling is donee here (Capital case dark shade, Small case light shade)
+          // Styling is done here (Capital case dark shade, Small case light shade)
           <div>
           {record.tags.map((tag)=> <Tag color={record.tags[1]}>{tag}</Tag>)}
           </div>
@@ -54,13 +120,12 @@ const Tables=()=>{
       key: 'Polls',
       render: (text,record)=>{
         return(
-          // Styling is donee here (Capital case dark shade, Small case light shade)
+          // Styling is done here (Capital case dark shade, Small case light shade)
        
           <div class="container">
             <div class="row spacing">
               <div class="col-xs-4">
-              <Button variant="light" onClick={UpVoteHandler}><i class="fa fa-thumbs-up" aria-hidden="true"></i></Button> 
-              {console.log(record.polls['up'])}
+              <Button variant="light" onClick={()=>{VoteHandler(record,0)}}><i class="fa fa-thumbs-up" aria-hidden="true"></i></Button> 
               </div>
               <div class="col-xs-4 colspace">
               {record.polls['up']}
@@ -69,7 +134,7 @@ const Tables=()=>{
   
           <div class="row spacing">
               <div class="col-xs-4 ">
-              <Button variant="light" onClick={DownVoteHandler}><i class="fa fa-thumbs-down"></i></Button> 
+              <Button variant="light" onClick={()=>{VoteHandler(record,1)}}><i class="fa fa-thumbs-down"></i></Button> 
               </div>
               <div class="col-xs-4 colspace">
               {record.polls['down']}
@@ -110,63 +175,6 @@ const Tables=()=>{
      );}, 
    },
    ];
-  const data = [{
-    key: '1',
-    productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/7488102/2019/8/22/8002a744-0dad-4dbb-9481-cf0090134c3b1566454086786-Dennis-Lingo-Men-Pink-Slim-Fit-Solid-Casual-Shirt-9891566454-1.jpg',
-    productnumber:'Dennis Lingo',
-    productname:'Men Slim Fit Casual Shirt',
-    Sender:'Tripti',
-    address: 'New York No. 1 Lake Park',
-    age: 32,
-    tags: ['M', 'Pink'],
-    Delete: 'Delete',
-    polls:{
-      up:UpNumber,down: DownNumber
-    },
-    }, 
-    {
-    key: '2',
-    productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/2414313/2018/3/13/11520926368526-HERENOW-Men-Red--Black-Regular-Fit-Checked-Casual-Shirt-8881520926368447-1.jpg',
-    productnumber:'HERE&NOW',
-    productname:'Men Red & Black Regular Fit Checked Casual Shirt',
-    Sender:'Tripti',
-    address: 'New York No. 1 Lake Park',
-    age: 32,
-    tags: ['XL', 'Red'],
-    Delete: 'Delete',
-    polls:{
-      up:UpNumber,down: DownNumber
-    },  
-  }, 
-    {
-    key: '3',
-    productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/productimage/2020/1/11/eb462dc3-eee9-4e28-ad71-07dc4c6410961578698196717-1.jpg',
-    productnumber:'Athena',
-    productname:'Women Burgundy & Brown Embellished Sheath Dress',
-    Sender:'Tripti',
-    address: 'New York No. 1 Lake Park',
-    age: 32,
-    tags: ['M', 'Silver'],
-    Delete: 'Delete',
-    polls:{
-      up:UpNumber,down: DownNumber
-    },  
-  }, 
-    {
-    key: '4',
-    productimage:'https://assets.myntassets.com/fl_progressive/q_80,w_150/v1/assets/images/8802271/2019/2/25/4265862d-956f-44a3-80b0-89147b9fe18b1551097050778-StyleStone-Womens-Tie-up-Rainbow-Print-Maxi-dress-4391551097-1.jpg',
-    productnumber:'StyleStone',
-    productname:'Rainbow Print Tie-Up Midi Dress',
-    Sender:'Tripti',
-    address: 'New York No. 1 Lake Park',
-    tags: ['L', 'Orange'],
-    age: 32,
-    Delete: 'Delete',
-    polls:{
-      up: UpNumber,down: DownNumber
-    },
-  }];
-  
   return <Table dataSource={data} columns={columns} />;
 }
 
