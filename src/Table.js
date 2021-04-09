@@ -118,7 +118,7 @@ const Tables=()=>{
     Sender:'Tripti',
     address: 'New York No. 1 Lake Park',
     age: 32,
-    tags: ['M', 'Blue'],
+    tags: ['M', 'Pink'],
     Delete: 'Delete',
     polls:{
       up:0,down:0
@@ -132,7 +132,7 @@ const Tables=()=>{
     Sender:'Tripti',
     address: 'New York No. 1 Lake Park',
     age: 32,
-    tags: ['XL', 'Orange'],
+    tags: ['XL', 'Red'],
     Delete: 'Delete',
     polls:{
       up:0,down:0
@@ -141,12 +141,12 @@ const Tables=()=>{
     {
     key: '3',
     productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/productimage/2020/1/11/eb462dc3-eee9-4e28-ad71-07dc4c6410961578698196717-1.jpg',
-    productnumber:'123456-1234-56',
-    productname:'AAAAA',
+    productnumber:'Athena',
+    productname:'Women Burgundy & Brown Embellished Sheath Dress',
     Sender:'Tripti',
     address: 'New York No. 1 Lake Park',
     age: 32,
-    tags: ['M', 'Red'],
+    tags: ['M', 'Silver'],
     Delete: 'Delete',
     polls:{
       up:0,down:0
@@ -155,11 +155,11 @@ const Tables=()=>{
     {
     key: '4',
     productimage:'https://assets.myntassets.com/fl_progressive/q_80,w_150/v1/assets/images/8802271/2019/2/25/4265862d-956f-44a3-80b0-89147b9fe18b1551097050778-StyleStone-Womens-Tie-up-Rainbow-Print-Maxi-dress-4391551097-1.jpg',
-    productnumber:'123456-1234-56',
-    productname:'AAAAA',
+    productnumber:'StyleStone',
+    productname:'Rainbow Print Tie-Up Midi Dress',
     Sender:'Tripti',
     address: 'New York No. 1 Lake Park',
-    tags: ['L', 'Green'],
+    tags: ['L', 'Orange'],
     age: 32,
     Delete: 'Delete',
     polls:{
