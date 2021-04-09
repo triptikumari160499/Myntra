@@ -1,11 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
 import swal from "sweetalert";
+import axios from "axios";
+import MyMessage from "../../Chat/MyMessage";
 
 const ExploreCard = (props) => {
+  const sendImage = props.image;
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios({
+      url: `https://api.chatengine.io/chats/`,
+      method: "get",
+      headers: {
+        "Content-Type": "application/json",
+        "Project-ID": "dd1bb131-88b0-4213-835c-26ee5449ff0b",
+        "User-Name": "Anshul",
+        "User-Secret": "123",
+      },
+    }).then((res) => {
+      setData(res.data);
+    });
+  });
+  const ClickHandler =(id) =>{
+    axios({
+      url: `https://api.chatengine.io/chats/${id}/messages/`,
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+        "Project-ID": "dd1bb131-88b0-4213-835c-26ee5449ff0b",
+        "User-Name": "Anshul",
+        "User-Secret": "123",
+      },
+      data:{"text":"Image Sent"}
+    })
+  }
+
   const share = () => {
     swal("Good job!", "You clicked the button!", "success");
   };
@@ -30,9 +62,11 @@ const ExploreCard = (props) => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="/Chat">Myntra</Dropdown.Item>
-                <Dropdown.Item href="/Chat">Chat</Dropdown.Item>
-                <Dropdown.Item href="/Chat">Something else</Dropdown.Item>
+                {data
+                  ? data.map((chat, key) => (
+                      <Button onClick={(id)=>ClickHandler(chat.id)}><Dropdown.Item href="/Chat" key={key}>{chat.title}</Dropdown.Item></Button>
+                    ))
+                  : null}
               </Dropdown.Menu>
             </Dropdown>
             {/* <Link to="/chat">
