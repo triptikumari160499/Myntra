@@ -3,7 +3,8 @@ import React from 'react'
 function SectionOne(props) {
     return (
         <div>
-        <h1>{props.title}</h1>
+        <br />
+        <h1 id="c">{props.title}</h1>
         <div id="deals">
           <div id="deals1">
             <div class="dealsimg">
