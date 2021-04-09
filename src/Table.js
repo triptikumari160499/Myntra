@@ -59,7 +59,7 @@ const Tables=()=>{
           <div class="container">
             <div class="row spacing">
               <div class="col-xs-4">
-              <Button onClick={UpVoteHandler}>Upvote {UpNumber} </Button> 
+              <Button onClick={UpVoteHandler}><i class="fa fa-thumbs-up" aria-hidden="true"></i></Button> 
               {console.log(record.polls['up'])}
               </div>
               <div class="col-xs-4 colspace">
@@ -69,7 +69,7 @@ const Tables=()=>{
   
           <div class="row spacing">
               <div class="col-xs-4 ">
-              <Button onClick={DownVoteHandler}>Downvote {DownNumber}</Button> 
+              <Button onClick={DownVoteHandler}><i class="fa fa-thumbs-down"></i></Button> 
               </div>
               <div class="col-xs-4 colspace">
               {record.polls['down']}
@@ -86,11 +86,11 @@ const Tables=()=>{
       dataIndex: 'Sender', 
       key: 'Sender',  
      },
-   {
-    title: 'Address',
-    dataIndex: 'address', 
-    key: 'address',  
-   },
+  //  {
+  //   title: 'Address',
+  //   dataIndex: 'address', 
+  //   key: 'address',  
+  //  },
    {
     title: 'age',
     dataIndex: 'age', 
@@ -121,7 +121,7 @@ const Tables=()=>{
     tags: ['M', 'Pink'],
     Delete: 'Delete',
     polls:{
-      up:0,down:0
+      up:UpNumber,down: DownNumber
     },
     }, 
     {
@@ -135,7 +135,7 @@ const Tables=()=>{
     tags: ['XL', 'Red'],
     Delete: 'Delete',
     polls:{
-      up:0,down:0
+      up:UpNumber,down: DownNumber
     },  
   }, 
     {
@@ -149,7 +149,7 @@ const Tables=()=>{
     tags: ['M', 'Silver'],
     Delete: 'Delete',
     polls:{
-      up:0,down:0
+      up:UpNumber,down: DownNumber
     },  
   }, 
     {
@@ -163,7 +163,7 @@ const Tables=()=>{
     age: 32,
     Delete: 'Delete',
     polls:{
-      up:0,down:0
+      up: UpNumber,down: DownNumber
     },
   }];
   
