@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { SendOutlined, PictureOutlined} from '@ant-design/icons';
 import { sendMessage, isTyping } from 'react-chat-engine';
 import React, { Component }  from 'react';
 import Button from 'react-bootstrap/Button'
@@ -41,7 +40,7 @@ const MessageForm = (props) => {
       />
       <label htmlFor="upload-button">
         <span className="image-button">
-          <PictureOutlined className="picture-icon" />
+        <i  class = "fas fa-images"></i>
         </span>
       </label>
       <input
@@ -52,10 +51,10 @@ const MessageForm = (props) => {
         onChange={handleUpload.bind(this)}
       />
       <button type="submit" className="send-button">
-      <i  class = "fas fa-share-square"></i>
+      <i  class = "fas fa-share"></i>
       </button>
       {/* Link to Wishlist page */}
-      <Button variant = "light" type="submit" className = "wishlist"><i  class = "fas fa-shopping-bag"></i></Button>
+      <Button variant = "white" type="submit" className = "wishlist"><i  class = "fas fa-shopping-bag"></i></Button>
     </form>
   );
 };

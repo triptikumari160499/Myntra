@@ -28,12 +28,17 @@ class Style extends React.Component {
           <Slider />
         </header>
         <div>
-
+        <br></br>
         <SectionOne title="DEALS OF THE DAY"/>
+        <br></br>
+        <br></br>
+        <br></br>
         <SectionTwo title="BIGGEST DEALS ON TOP BRANDS" />
+        <br></br>
+        <br></br>
+        <br></br>
         <SectionThree title="CATEGORIES TO BAG" />
         <SectionFour title="EXPLORE TOP BRANDS" />
-        
         </div>
         <ExploreSection title="WESTERN WEAR" images={westernImages} />
         <ExploreSection title="TRENDING IN INDIAN WEAR" images={indianImages} />
