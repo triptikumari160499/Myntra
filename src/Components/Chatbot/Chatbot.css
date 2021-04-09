@@ -19,3 +19,19 @@
     height: 460px;
     width: 300px;
   }
+  .react-chatbot-kit-chat-bot-avatar-letter{
+    margin-top: 15px;
+  }
+  .react-chatbot-kit-user-avatar-container{
+    background-color: #7554a0;
+  }
+  .react-chatbot-kit-chat-bot-message{
+    background-color: #7554a0;
+  }
+  .react-chatbot-kit-chat-btn-send{
+    background-color: #7554a0;
+  }
+  .react-chatbot-kit-chat-bot-message-arrow
+  {
+    border-right-color: #7554a0;
+  }

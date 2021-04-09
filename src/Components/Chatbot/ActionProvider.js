@@ -11,7 +11,7 @@ class ActionProvider {
   
     handleJavascriptQuiz = () => {
       const message = this.createChatBotMessage(
-        "Fantastic. Here is your quiz. Good luck!",
+        "Fantastic.",
         {
           widget: "javascriptQuiz",
         }
