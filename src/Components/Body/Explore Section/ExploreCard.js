@@ -11,8 +11,8 @@ const ExploreCard = (props) => {
       };
     return (
         <>
-        <div id="western1">
-            <div class="westernimg">
+        <div>
+            <div className="gallery">
               <img
                 src={props.image}
                 alt=""
