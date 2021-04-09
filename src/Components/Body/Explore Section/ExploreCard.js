@@ -30,9 +30,9 @@ const ExploreCard = (props) => {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Myntra</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Chat</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                <Dropdown.Item href="/Chat">Myntra</Dropdown.Item>
+                <Dropdown.Item href="/Chat">Chat</Dropdown.Item>
+                <Dropdown.Item href="/Chat">Something else</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
             {/* <Link to="/chat">
