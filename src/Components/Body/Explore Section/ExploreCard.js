@@ -11,43 +11,43 @@ const ExploreCard = (props) => {
   };
   return (
     <>
-      <div>
-        <div className="gallery">
+      <div class="col mt-4">
+        <div className="card">
           <img src={props.image} alt="" />
-        </div>
-        <div class="card-link-div ">
-          <Button
-            variant="light"
-            style={{ cursor: "pointer" }}
-            onClick={share}
-            class="card-link"
-          >
-            <i class="far fa-heart"></i>
-          </Button>
+          <div class="card-link-div card-body">
+            <Button
+              variant="light"
+              style={{ cursor: "pointer" }}
+              onClick={share}
+              class="card-link"
+            >
+              <i class="far fa-heart"></i>
+            </Button>
 
-          <Dropdown>
-            <Dropdown.Toggle variant="light" id="dropdown-basic">
-              <i class="fas fa-user-friends"></i>
-            </Dropdown.Toggle>
+            <Dropdown>
+              <Dropdown.Toggle variant="light" id="dropdown-basic">
+                <i class="fas fa-user-friends"></i>
+              </Dropdown.Toggle>
 
-            <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">Myntra</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Chat</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-          {/* <Link to="/chat">
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Myntra</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Chat</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            {/* <Link to="/chat">
                                     <Button variant="light" ><i class="fas fa-share-alt"></i>                    
                                     </Button>
                                 </Link> */}
 
-          <Link to="/stories">
-            <Button variant="light">
-              <i class="fas fa-insta">
-                <i class="fab fa-instagram"></i>
-              </i>
-            </Button>
-          </Link>
+            <Link to="/stories">
+              <Button variant="light">
+                <i class="fas fa-insta">
+                  <i class="fab fa-instagram"></i>
+                </i>
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
     </>
