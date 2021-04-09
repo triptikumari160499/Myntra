@@ -5,23 +5,25 @@ function Header() {
   return (
     <>
       <div id="nav">
-        <img src="https://images.assettype.com/afaqs%2F2021-01%2F51966c7c-de5b-4092-ac03-e1f5e6152b32%2Fmyntra.png?auto=format%2Ccompress&w=1200"></img>
-        <div id="items">
-          <a className="nav_item">
-            MEN
-          </a>
-          <a className="nav_item">
-            WOMEN
-          </a>
-          <a className="nav_item">
-            KIDS
-          </a>
-          <a className="nav_item">
-            HOME & LIVING
-          </a>
-          <a className="nav_item">
-            OFFERS
-          </a>
+        <a href="#">
+          <img src="https://images.assettype.com/afaqs%2F2021-01%2F51966c7c-de5b-4092-ac03-e1f5e6152b32%2Fmyntra.png?auto=format%2Ccompress&w=1200" />
+        </a>
+        <div className="item_container">
+          <div id="items">
+            <a className="nav_item">MEN</a>
+          </div>
+          <div id="items">
+            <a className="nav_item">WOMEN</a>
+          </div>
+          <div id="items">
+            <a className="nav_item">KIDS</a>
+          </div>
+          <div id="items">
+            <a className="nav_item">HOME & LIVING</a>
+          </div>
+          <div id="items">
+            <a className="nav_item">OFFERS</a>
+          </div>
         </div>
 
         <div id="searchbar">
@@ -30,15 +32,13 @@ function Header() {
         </div>
 
         <div id="profile">
-          <i id="pro" class="ri-account-pin-circle-line">
-            <div id="line"></div>
-          </i>
-          <i class="ri-star-line"></i>
+          <Link className="link"><i className="fas fa-user-circle" title="Profile"></i></Link>
+          <Link className="link"><i className="fas fa-heart" title="Wishlist"></i></Link>
           {/* Links to the Chat Component */}
-          <Link to="/chat">
-            <i class="chaticon">Chat</i>
+          <Link to="/chat" className="link">
+          <i className="fad fa-comments-alt" title="Chat with Friends"></i>
           </Link>
-          <i class="ri-shopping-bag-line"></i>
+          <Link className="link"> <i className="fas fa-cart-plus" title="Cart"></i></Link>
         </div>
       </div>
     </>
