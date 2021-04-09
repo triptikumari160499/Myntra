@@ -4,7 +4,7 @@ import Chatbot from "react-chatbot-kit";
 import ActionProvider from './ActionProvider';
 import MessageParser from './MessageParser';
 import "./Chatbot.css";
-import { createChatBotMessage } from "react-chatbot-kit";
+import {createChatBotMessage} from "react-chatbot-kit";
 import Options from './Option/Option';
 import Quiz from './Quiz/Quiz';
 
