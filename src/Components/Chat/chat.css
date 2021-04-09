@@ -155,8 +155,8 @@
   
   .message-form-container {
     position: absolute;
-    bottom: 0px;
-    width: calc(100% - 36px);
+    bottom: 25px;
+    width: calc(100% - 24px);
     padding: 18px;
     background-color: rgb(233 137 27 / 23%);
   }
