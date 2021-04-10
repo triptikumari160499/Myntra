@@ -11,20 +11,36 @@ import './cust.css';
 const Tables=()=>{
   const VoteHandler = (record,type) =>{
     
-    
-    let newArr=[...data]; // copy of existing data
+    let newArr=[];
+    //for Deleting the item
+    if(type===3)
+    { 
+      data.forEach(element =>{
+        if(element['key']===record['key'])
+          return;
+        newArr.push(element);
+       });
+       alert('Product :'+record.productnumber+' deleted!');
+    }
+    else{
+      newArr=[...data]; // copy of existing data
+    }
+    //for handling votes
     data.forEach(element => {
       if(element['key']===record['key'])   // find the button to update state
       {
+        //Disables vote
         if(type===2)
         {
           element['polls']['state']=false;
-          alert('Deleted');
+          alert('Polls Disabled for '+record.productnumber);
         }
+        
         if(element['polls']['state']==true){
-        if(type===0)
+        //Upvotes
+          if(type===0)
         element['polls']['up']+=1;
-        else if(type===1)
+        else if(type===1)//Downvotes
         element['polls']['down']+=1;
         }
       }
@@ -171,7 +187,6 @@ const Tables=()=>{
       render : (text,record)=>{
         return( 
           <div className="chartstyle">
-          {console.log(record)}
         <Chart
           chartType="PieChart"
           data={[["Ups", "Downs"], ["Ups",record['polls']['up']], ["Downs", record['polls']['down']]]}
@@ -233,6 +248,18 @@ const Tables=()=>{
     key: 'age',
    },
    {
+    title: 'Disable Poll',
+    key: 'Disable', 
+    render: (text, record) => {
+      return (
+       <div>
+       {/*<Avatar src={record.productimage}/> */}
+         {/* To Disable like dislike button */}
+          <Button onClick={()=>VoteHandler(record,2)}>Disable</Button>
+          </div>
+     );}, 
+   },
+   {
     title: 'Delete',
     dataIndex: 'Delete', 
     key: 'Delete', 
@@ -241,10 +268,11 @@ const Tables=()=>{
        <div>
        {/*<Avatar src={record.productimage}/> */}
          {/* To Disable like dislike button */}
-          <Button onClick={()=>VoteHandler(record,2)}>{record.Delete}</Button>
+          <Button onClick={()=>VoteHandler(record,3)}>{record.Delete}</Button>
           </div>
      );}, 
    },
+
    ];
   return <Table dataSource={data} columns={columns} />;
 }
