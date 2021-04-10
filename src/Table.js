@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {Tag, Divider,Table} from "antd";
 import 'antd/dist/antd.css';
-import Style from "./Components/Styling/Styling";
 // import { Button } from "bootstrap";
 import Button from "react-bootstrap/Button";
 import Chart from "react-google-charts";
@@ -11,17 +10,27 @@ import './cust.css';
 
 const Tables=()=>{
   const VoteHandler = (record,type) =>{
+    
+    
     let newArr=[...data]; // copy of existing data
     data.forEach(element => {
-      if(element['key']==record['key'])   // find the button to update state
+      if(element['key']===record['key'])   // find the button to update state
       {
-        if(type==0)
+        if(type===2)
+        {
+          element['polls']['state']=false;
+          alert('Deleted');
+        }
+        if(element['polls']['state']==true){
+        if(type===0)
         element['polls']['up']+=1;
-        else
+        else if(type===1)
         element['polls']['down']+=1;
+        }
       }
       setVote(newArr); // set the Changed state
     });
+  
    // console.log(record);
   }
   // const DownVoteHandler = () =>{
@@ -39,7 +48,7 @@ const Tables=()=>{
     tags: ['M', 'Pink'],
     Delete: 'Delete',
     polls:{
-      up:0,down: 0
+      up:0,down: 0,state:true,
     },
     }, 
     {
@@ -53,7 +62,7 @@ const Tables=()=>{
     tags: ['XL', 'Red'],
     Delete: 'Delete',
     polls:{
-      up:0,down: 0
+      up:0,down: 0,state:true,
     },  
   }, 
     {
@@ -67,7 +76,7 @@ const Tables=()=>{
     tags: ['M', 'Silver'],
     Delete: 'Delete',
     polls:{
-      up:0, down: 0
+      up:0, down: 0,state:true,
     },  
   }, 
     {
@@ -81,7 +90,7 @@ const Tables=()=>{
     age: 32,
     Delete: 'Delete',
     polls:{
-      up: 0,down: 0
+      up: 0,down: 0,state:true,
     },
   }]);
 
@@ -231,8 +240,8 @@ const Tables=()=>{
       return (
        <div>
        {/*<Avatar src={record.productimage}/> */}
-         
-          <a href="javascript:alert('Deleted');">{record.Delete}</a>
+         {/* To Disable like dislike button */}
+          <Button onClick={()=>VoteHandler(record,2)}>{record.Delete}</Button>
           </div>
      );}, 
    },
