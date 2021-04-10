@@ -268,7 +268,7 @@ const Tables=()=>{
        <div>
        {/*<Avatar src={record.productimage}/> */}
          {/* To Disable like dislike button */}
-          <Button onClick={()=>VoteHandler(record,3)}>{record.Delete}</Button>
+          <Button variant="danger" onClick={()=>VoteHandler(record,3)}>{record.Delete}</Button>
           </div>
      );}, 
    },
