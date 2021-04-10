@@ -4,7 +4,10 @@ import 'antd/dist/antd.css';
 import Style from "./Components/Styling/Styling";
 // import { Button } from "bootstrap";
 import Button from "react-bootstrap/Button";
+import Chart from "react-google-charts";
 import './cust.css';
+
+
 
 const Tables=()=>{
   const VoteHandler = (record,type) =>{
@@ -17,7 +20,7 @@ const Tables=()=>{
         else
         element['polls']['down']+=1;
       }
-      setUpVote(newArr); // set the Changed state
+      setVote(newArr); // set the Changed state
     });
    // console.log(record);
   }
@@ -25,7 +28,7 @@ const Tables=()=>{
   //   setDownNumber(DownNumber+1)
   // }
   
-  const [data,setUpVote] = useState([{
+  const [data,setVote] = useState([{
     key: '1',
     productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/7488102/2019/8/22/8002a744-0dad-4dbb-9481-cf0090134c3b1566454086786-Dennis-Lingo-Men-Pink-Slim-Fit-Solid-Casual-Shirt-9891566454-1.jpg',
     productnumber:'Dennis Lingo',
@@ -64,7 +67,7 @@ const Tables=()=>{
     tags: ['M', 'Silver'],
     Delete: 'Delete',
     polls:{
-      up:0,down: 0
+      up:0, down: 0
     },  
   }, 
     {
@@ -81,6 +84,45 @@ const Tables=()=>{
       up: 0,down: 0
     },
   }]);
+
+  const pieOptions = {
+    title: "",
+    pieHole: 0,
+    slices: [
+      {
+        color: "#2BB673"
+      },
+      {
+        color: "#d91e48"
+      },
+      {
+        color: "#007fad"
+      },
+      {
+        color: "#e9a227"
+      }
+    ],
+    legend: {
+      position: "bottom",
+      alignment: "center",
+      textStyle: {
+        color: "233238",
+        fontSize: 14
+      }
+    },
+    tooltip: {
+      showColorCode: true
+    },
+    chartArea: {
+      left: 10,
+      top: 10,
+      width: "100%",
+      height: "80%"
+    },
+    fontName: "Roboto"
+  };
+
+
   // const [data,setDownNumber] = useState(data);
   const columns = [
     {
@@ -89,7 +131,7 @@ const Tables=()=>{
     key: 'Product',
     render: (text, record) => {
        return (
-        <div>
+        <div >
         <img src={record.productimage}/>
         {/*<Avatar src={record.productimage}/> */}
           
@@ -97,8 +139,7 @@ const Tables=()=>{
            <a href="javascript:alert('Check');">{record.productname}</a>
            </div>
       );
-    }
-      ,
+      },
     }, 
     {
       title: 'Details',
@@ -113,6 +154,27 @@ const Tables=()=>{
         );
       }
       ,
+    },
+    {
+      title: 'Visual Trend',
+      dataIndex: 'polls',
+      key: 'Graph',
+      render : (text,record)=>{
+        return( 
+          <div className="chartstyle">
+          {console.log(record)}
+        <Chart
+          chartType="PieChart"
+          data={[["Ups", "Downs"], ["Ups",record['polls']['up']], ["Downs", record['polls']['down']]]}
+          options={pieOptions}
+     
+          width={"100%"}
+          height={"200px"}
+          legend_toggle
+        />
+      </div>
+        )
+      }
     },
     {
       title: 'User Polls',

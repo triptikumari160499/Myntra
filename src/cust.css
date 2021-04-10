@@ -8,3 +8,13 @@
     position: absolute;
   right: 6em;
 }
+
+.chartstyle{
+  width: 250px;
+  height: 250px;
+  padding: 1em;
+}
+
+.ant-table-cell{
+  width: 300px;
+}
