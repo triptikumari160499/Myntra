@@ -5,10 +5,9 @@ import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
 import swal from "sweetalert";
 import axios from "axios";
-import MyMessage from "../../Chat/MyMessage";
 
 const ExploreCard = (props) => {
-  const sendImage = props.image;
+  const sendImg = props.image;
   const [data, setData] = useState([]);
   useEffect(() => {
     axios({
@@ -16,26 +15,31 @@ const ExploreCard = (props) => {
       method: "get",
       headers: {
         "Content-Type": "application/json",
-        "Project-ID": "dd1bb131-88b0-4213-835c-26ee5449ff0b",
-        "User-Name": "Anshul",
-        "User-Secret": "123",
+        "Project-ID": "2dce4089-e3a8-48cb-a8a6-33eda4c3799f",
+        "User-Name": "aa",
+        "User-Secret": "aa",
       },
     }).then((res) => {
       setData(res.data);
     });
-  });
-  const ClickHandler =(id) =>{
-    axios({
-      url: `https://api.chatengine.io/chats/${id}/messages/`,
-      method: "post",
+  }, []);
+
+  async function ClickHandler(id) {
+    const config = {
       headers: {
         "Content-Type": "application/json",
-        "Project-ID": "dd1bb131-88b0-4213-835c-26ee5449ff0b",
-        "User-Name": "Anshul",
-        "User-Secret": "123",
       },
-      data:{"text":"Image Sent"}
-    })
+    };
+    const body = {
+      chat_id: id,
+      img_src: sendImg,
+    };
+    const res = await axios.post(
+      "https://myntra-backend-hackathon.herokuapp.com/images/",
+      body,
+      config
+    );
+    console.log(res.data);
   }
 
   const share = () => {
@@ -63,8 +67,10 @@ const ExploreCard = (props) => {
 
               <Dropdown.Menu>
                 {data
-                  ? data.map((chat, key) => (
-                      <Button onClick={(id)=>ClickHandler(chat.id)}><Dropdown.Item href="/Chat" key={key}>{chat.title}</Dropdown.Item></Button>
+                  ? data.map((chat, idx) => (
+                      <Button onClick={(id) => ClickHandler(chat.id)}>
+                        <Dropdown.Item href="/chat" >{chat.title}</Dropdown.Item>
+                      </Button>
                     ))
                   : null}
               </Dropdown.Menu>
