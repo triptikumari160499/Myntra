@@ -60,7 +60,7 @@ const Tables=()=>{
     productname:'Men Slim Fit Casual Shirt',
     Sender:'Tripti',
     address: 'New York No. 1 Lake Park',
-    age: 32,
+   
     tags: ['M', 'Pink'],
     Delete: 'Delete',
     polls:{
@@ -74,7 +74,6 @@ const Tables=()=>{
     productname:'Men Red & Black Regular Fit Checked Casual Shirt',
     Sender:'Tripti',
     address: 'New York No. 1 Lake Park',
-    age: 32,
     tags: ['XL', 'Red'],
     Delete: 'Delete',
     polls:{
@@ -88,7 +87,6 @@ const Tables=()=>{
     productname:'Women Burgundy & Brown Embellished Sheath Dress',
     Sender:'Tripti',
     address: 'New York No. 1 Lake Park',
-    age: 32,
     tags: ['M', 'Silver'],
     Delete: 'Delete',
     polls:{
@@ -103,7 +101,6 @@ const Tables=()=>{
     Sender:'Tripti',
     address: 'New York No. 1 Lake Park',
     tags: ['L', 'Orange'],
-    age: 32,
     Delete: 'Delete',
     polls:{
       up: 0,down: 0,state:true,
@@ -242,11 +239,7 @@ const Tables=()=>{
   //   dataIndex: 'address', 
   //   key: 'address',  
   //  },
-   {
-    title: 'age',
-    dataIndex: 'age', 
-    key: 'age',
-   },
+   
    {
     title: 'Disable Poll',
     key: 'Disable', 

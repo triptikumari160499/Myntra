@@ -16,8 +16,8 @@ const ExploreCard = (props) => {
       headers: {
         "Content-Type": "application/json",
         "Project-ID": "2dce4089-e3a8-48cb-a8a6-33eda4c3799f",
-        "User-Name": "aa",
-        "User-Secret": "aa",
+        "User-Name": "Anshul",
+        "User-Secret": "anshul",
       },
     }).then((res) => {
       setData(res.data);
@@ -43,7 +43,7 @@ const ExploreCard = (props) => {
   }
 
   const share = () => {
-    swal("Good job!", "You clicked the button!", "success");
+    swal("Yeahh!!", "Item added to Wishlist", "success");
   };
   return (
     <>
@@ -68,7 +68,7 @@ const ExploreCard = (props) => {
               <Dropdown.Menu>
                 {data
                   ? data.map((chat, idx) => (
-                      <Button onClick={(id) => ClickHandler(chat.id)}>
+                      <Button variant = "light" onClick={(id) => ClickHandler(chat.id) }>
                         <Dropdown.Item href="/chat" >{chat.title}</Dropdown.Item>
                       </Button>
                     ))
