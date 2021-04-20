@@ -102,6 +102,7 @@ const ChatFeed = (props) => {
       {data.map((object, idx) => {
         if (chat.id === object.chat_id)
           return <img src={object.img_src} alt="Sent Image" className="send-image"/>;
+         
         return null;
       })}
 

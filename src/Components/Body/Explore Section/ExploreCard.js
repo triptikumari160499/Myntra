@@ -9,8 +9,9 @@ import axios from "axios";
 const ExploreCard = (props) => {
   const sendImg = props.image;
   const [data, setData] = useState([]);
-  useEffect(() => {
-    axios({
+  useEffect(
+    async () => {
+    await axios({
       url: `https://api.chatengine.io/chats/`,
       method: "get",
       headers: {
@@ -39,7 +40,7 @@ const ExploreCard = (props) => {
       body,
       config
     );
-    console.log(res.data);
+    console.log(res);
   }
 
   const share = () => {
@@ -68,7 +69,7 @@ const ExploreCard = (props) => {
               <Dropdown.Menu>
                 {data
                   ? data.map((chat, idx) => (
-                      <Button variant = "light" onClick={(id) => ClickHandler(chat.id) }>
+                      <Button variant = "light" onClick={() => ClickHandler(chat.id) }>
                         <Dropdown.Item href="/chat" >{chat.title}</Dropdown.Item>
                       </Button>
                     ))

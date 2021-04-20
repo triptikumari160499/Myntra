@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect,useState } from "react";
 import {Tag, Divider,Table} from "antd";
 import 'antd/dist/antd.css';
 // import { Button } from "bootstrap";
@@ -6,10 +6,23 @@ import Button from "react-bootstrap/Button";
 import Chart from "react-google-charts";
 import './cust.css';
 
+import axios from "axios";
 
 
 const Tables=()=>{
-  const VoteHandler = (record,type) =>{
+  const [data1, setData1] = useState({});
+
+  useEffect(async () => {
+    const res = await axios.get(
+      "https://myntra-backend-hackathon.herokuapp.com/images/"
+    );
+    console.log(res.data);
+    setData1(res.data);
+    // const img=data1[7].img_src;
+
+  }, []);
+  // data1? console.log(data1[1].chat_id) :alert("Hi");
+const VoteHandler = (record,type) =>{
     
     let newArr=[];
     //for Deleting the item
@@ -55,13 +68,13 @@ const Tables=()=>{
   
   const [data,setVote] = useState([{
     key: '1',
-    productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/7488102/2019/8/22/8002a744-0dad-4dbb-9481-cf0090134c3b1566454086786-Dennis-Lingo-Men-Pink-Slim-Fit-Solid-Casual-Shirt-9891566454-1.jpg',
+    // productimage:img,
     productnumber:'Dennis Lingo',
     productname:'Men Slim Fit Casual Shirt',
     Sender:'Tripti',
     address: 'New York No. 1 Lake Park',
    
-    tags: ['M', 'Pink'],
+    tags: ['M', 'Green'],
     Delete: 'Delete',
     polls:{
       up:0,down: 0,state:true,
@@ -148,7 +161,7 @@ const Tables=()=>{
   // const [data,setDownNumber] = useState(data);
   const columns = [
     {
-    title: 'Product',
+    title: 'PRODUCT',
     dataIndex: 'Product',
     key: 'Product',
     render: (text, record) => {
@@ -267,7 +280,12 @@ const Tables=()=>{
    },
 
    ];
-  return <Table dataSource={data} columns={columns} />;
+   
+  return <Table dataSource={data} columns={columns} 
+  align="center"
+  
+  />;
+  
 }
 
 
