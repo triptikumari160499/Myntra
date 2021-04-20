@@ -5,8 +5,7 @@
 }
 
 .colspace{
-    position: absolute;
-  right: 6em;
+  margin : 5px 10px;
 }
 
 .chartstyle{
@@ -15,6 +14,44 @@
   padding: 1em;
 }
 
-.ant-table-cell{
-  width: 300px;
+
+.ant-table-thead>tr>.ant-table-cell{
+  background-color: pink;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.ant-table-tbody>tr>.ant-table-cell{
+  text-align: center;
+  font-size: 16px;
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.header{
+  text-align: center;
+  margin: 20px auto;
+  padding-top: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.stylerbg{
+  margin-top: -20px;
+  background-image: url('https://media2.giphy.com/media/IoKbxAoKah2Ug/giphy.gif');
+  background-size: cover;
+}
+
+.tableStyle{
+  margin: 1.5em;
+  
+}
+
+.ant-table{
+  border : 2px solid;
+  box-shadow : 5px 5px gray;
 }

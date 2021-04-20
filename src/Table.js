@@ -161,7 +161,7 @@ const VoteHandler = (record,type) =>{
   // const [data,setDownNumber] = useState(data);
   const columns = [
     {
-    title: 'PRODUCT',
+    title: 'Product',
     dataIndex: 'Product',
     key: 'Product',
     render: (text, record) => {
@@ -281,11 +281,14 @@ const VoteHandler = (record,type) =>{
 
    ];
    
-  return <Table dataSource={data} columns={columns} 
+  return <div className="stylerbg">
+  <div className="container header"> Group Wishlist </div> 
+  <div className="tableStyle">
+  <Table dataSource={data} columns={columns} 
   align="center"
-  
   />;
-  
+  </div>
+  </div>  
 }
 
 
