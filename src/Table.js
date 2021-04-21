@@ -125,10 +125,10 @@ const VoteHandler = (record,type) =>{
     pieHole: 0,
     slices: [
       {
-        color: "#2BB673"
+        color: "#24ed3b"
       },
       {
-        color: "#d91e48"
+        color: "#fc3d70"
       },
       {
         color: "#007fad"
@@ -282,7 +282,7 @@ const VoteHandler = (record,type) =>{
    ];
    
   return <div className="stylerbg">
-  <div className="container header"> Group Wishlist </div> 
+  <div className="container header"> Room Wishlist </div> 
   <div className="tableStyle">
   <Table dataSource={data} columns={columns} 
   align="center"

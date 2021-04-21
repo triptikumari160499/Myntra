@@ -16,11 +16,12 @@
 
 
 .ant-table-thead>tr>.ant-table-cell{
-  background-color: pink;
+  background-color: #ff00aa;
   text-align: center;
   font-size: 18px;
   font-weight: 600;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:white;
 }
 
 .ant-table-tbody>tr>.ant-table-cell{
@@ -42,7 +43,7 @@
 
 .stylerbg{
   margin-top: -20px;
-  background-image: url('https://media2.giphy.com/media/IoKbxAoKah2Ug/giphy.gif');
+  background-image: url('https://media0.giphy.com/media/1368cjuhRQBOak/giphy.gif');
   background-size: cover;
 }
 
