@@ -125,7 +125,7 @@ const VoteHandler = (record,type) =>{
     pieHole: 0,
     slices: [
       {
-        color: "#24ed3b"
+        color: "#23c436"
       },
       {
         color: "#fc3d70"
