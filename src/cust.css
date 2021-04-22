@@ -56,3 +56,8 @@
   border : 2px solid;
   box-shadow : 5px 5px gray;
 }
+
+.disabled-row {
+  background-color: #dcdcdc;
+  pointer-events: none;
+}

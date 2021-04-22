@@ -48,6 +48,7 @@ const ExploreCard = (props) => {
   };
   return (
     <>
+    <Link to="/Photo">
       <div class="col mt-4">
         <div className="card">
           <img src={props.image} alt="" />
@@ -91,6 +92,7 @@ const ExploreCard = (props) => {
           </div>
         </div>
       </div>
+      </Link>
     </>
   );
 };

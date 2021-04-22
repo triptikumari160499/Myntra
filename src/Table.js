@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from "react";
-import {Tag, Divider,Table} from "antd";
+import {Table} from "antd";
 import 'antd/dist/antd.css';
 // import { Button } from "bootstrap";
 import Button from "react-bootstrap/Button";
@@ -7,8 +7,46 @@ import Chart from "react-google-charts";
 import './cust.css';
 import axios from "axios";
 
+const pieOptions = {
+  title: "",
+  pieHole: 0,
+  slices: [
+    {
+      color: "#23c436"
+    },
+    {
+      color: "#fc3d70"
+    },
+    {
+      color: "#007fad"
+    },
+    {
+      color: "#e9a227"
+    }
+  ],
+  legend: {
+    position: "bottom",
+    alignment: "center",
+    textStyle: {
+      color: "233238",
+      fontSize: 14
+    }
+  },
+  tooltip: {
+    showColorCode: true
+  },
+  chartArea: {
+    left: 10,
+    top: 10,
+    width: "100%",
+    height: "80%"
+  },
+  fontName: "Roboto"
+};
+
 
 const Tables=()=>{
+
   const [data1, setData1] = useState([]);
 
   useEffect(async () => {
@@ -19,8 +57,9 @@ const Tables=()=>{
     setData1(res.data);
   }, []);
 
+  
   const d = data1.map((i)=>i.img_src) ;  
-console.log(d[0]);
+  console.log(d[0]);
 
 const VoteHandler = (record,type) =>{
     
@@ -69,12 +108,7 @@ const VoteHandler = (record,type) =>{
   const [data,setVote] = useState([{
     key: '1',
     productimage:d[0],
-    productnumber:'Dennis Lingo',
-    productname:'Men Slim Fit Casual Shirt',
     Sender:'Tripti',
-    address: 'New York No. 1 Lake Park',
-   
-    tags: ['M', 'Green'],
     Delete: 'Delete',
     polls:{
       up:0,down: 0,state:true,
@@ -83,11 +117,7 @@ const VoteHandler = (record,type) =>{
     {
     key: '2',
     productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/2414313/2018/3/13/11520926368526-HERENOW-Men-Red--Black-Regular-Fit-Checked-Casual-Shirt-8881520926368447-1.jpg',
-    productnumber:'HERE&NOW',
-    productname:'Men Red & Black Regular Fit Checked Casual Shirt',
     Sender:'Tripti',
-    address: 'New York No. 1 Lake Park',
-    tags: ['XL', 'Red'],
     Delete: 'Delete',
     polls:{
       up:0,down: 0,state:true,
@@ -96,11 +126,7 @@ const VoteHandler = (record,type) =>{
     {
     key: '3',
     productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/productimage/2020/1/11/eb462dc3-eee9-4e28-ad71-07dc4c6410961578698196717-1.jpg',
-    productnumber:'Athena',
-    productname:'Women Burgundy & Brown Embellished Sheath Dress',
     Sender:'Tripti',
-    address: 'New York No. 1 Lake Park',
-    tags: ['M', 'Silver'],
     Delete: 'Delete',
     polls:{
       up:0, down: 0,state:true,
@@ -109,53 +135,14 @@ const VoteHandler = (record,type) =>{
     {
     key: '4',
     productimage:'https://assets.myntassets.com/fl_progressive/q_80,w_150/v1/assets/images/8802271/2019/2/25/4265862d-956f-44a3-80b0-89147b9fe18b1551097050778-StyleStone-Womens-Tie-up-Rainbow-Print-Maxi-dress-4391551097-1.jpg',
-    productnumber:'StyleStone',
-    productname:'Rainbow Print Tie-Up Midi Dress',
     Sender:'Tripti',
-    address: 'New York No. 1 Lake Park',
-    tags: ['L', 'Orange'],
     Delete: 'Delete',
     polls:{
       up: 0,down: 0,state:true,
     },
   }]);
 
-  const pieOptions = {
-    title: "",
-    pieHole: 0,
-    slices: [
-      {
-        color: "#23c436"
-      },
-      {
-        color: "#fc3d70"
-      },
-      {
-        color: "#007fad"
-      },
-      {
-        color: "#e9a227"
-      }
-    ],
-    legend: {
-      position: "bottom",
-      alignment: "center",
-      textStyle: {
-        color: "233238",
-        fontSize: 14
-      }
-    },
-    tooltip: {
-      showColorCode: true
-    },
-    chartArea: {
-      left: 10,
-      top: 10,
-      width: "100%",
-      height: "80%"
-    },
-    fontName: "Roboto"
-  };
+  
 
 
   // const [data,setDownNumber] = useState(data);
@@ -176,20 +163,20 @@ const VoteHandler = (record,type) =>{
       );
       },
     }, 
-    {
-      title: 'Details',
-      dataIndex: 'tags',
-      key: 'Details',
-      render: (text,record)=>{
-        return(
-          // Styling is done here (Capital case dark shade, Small case light shade)
-          <div>
-          {record.tags.map((tag)=> <Tag color={record.tags[1]}>{tag}</Tag>)}
-          </div>
-        );
-      }
-      ,
-    },
+    // {
+    //   title: 'Details',
+    //   dataIndex: 'tags',
+    //   key: 'Details',
+    //   render: (text,record)=>{
+    //     return(
+    //       // Styling is done here (Capital case dark shade, Small case light shade)
+    //       <div>
+    //       {record.tags.map((tag)=> <Tag color={record.tags[1]}>{tag}</Tag>)}
+    //       </div>
+    //     );
+    //   }
+    //   ,
+    // },
     {
       title: 'Visual Trend',
       dataIndex: 'polls',
