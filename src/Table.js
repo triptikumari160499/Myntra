@@ -108,6 +108,7 @@ const VoteHandler = (record,type) =>{
   const [data,setVote] = useState([{
     key: '1',
     productimage:d[0],
+    productlink:"https://www.myntra.com/shirts/dennis-lingo/dennis-lingo-men-pink-slim-fit-solid-casual-shirt/7488102/buy",
     Sender:'Tripti',
     Delete: 'Delete',
     polls:{
@@ -117,6 +118,7 @@ const VoteHandler = (record,type) =>{
     {
     key: '2',
     productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/2414313/2018/3/13/11520926368526-HERENOW-Men-Red--Black-Regular-Fit-Checked-Casual-Shirt-8881520926368447-1.jpg',
+    productlink:"https://www.myntra.com/shirts/herenow/herenow-men-red--black-regular-fit-checked-casual-shirt/2414313/buy",
     Sender:'Tripti',
     Delete: 'Delete',
     polls:{
@@ -126,6 +128,7 @@ const VoteHandler = (record,type) =>{
     {
     key: '3',
     productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/productimage/2020/1/11/eb462dc3-eee9-4e28-ad71-07dc4c6410961578698196717-1.jpg',
+    productlink:"https://www.myntra.com/dresses/athena/athena-women-burgundy--brown-embellished-sheath-dress/11312210/buy",
     Sender:'Tripti',
     Delete: 'Delete',
     polls:{
@@ -135,6 +138,7 @@ const VoteHandler = (record,type) =>{
     {
     key: '4',
     productimage:'https://assets.myntassets.com/fl_progressive/q_80,w_150/v1/assets/images/8802271/2019/2/25/4265862d-956f-44a3-80b0-89147b9fe18b1551097050778-StyleStone-Womens-Tie-up-Rainbow-Print-Maxi-dress-4391551097-1.jpg',
+    productlink:"https://www.myntra.com/dresses/rain--rainbow/rain--rainbow-women-lime-green--golden-sequinned-yoke-printed-tie-up-maxi-dress/12334686/buy",
     Sender:'Tripti',
     Delete: 'Delete',
     polls:{
@@ -154,7 +158,9 @@ const VoteHandler = (record,type) =>{
     render: (text, record) => {
        return (
         <div >
+        <a href={record.productlink}>
         <img src={record.productimage}/>
+        </a>
         {/*<Avatar src={record.productimage}/> */}
           
            <div>{record.productnumber}</div>
@@ -272,8 +278,7 @@ const VoteHandler = (record,type) =>{
   <div className="container header"> Room Wishlist </div> 
   <div className="tableStyle">
   <Table dataSource={data} columns={columns} 
-  align="center"
-  />;
+   align="center"/>;
   </div>
   </div>  
 }
