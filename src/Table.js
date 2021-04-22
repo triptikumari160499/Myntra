@@ -5,12 +5,11 @@ import 'antd/dist/antd.css';
 import Button from "react-bootstrap/Button";
 import Chart from "react-google-charts";
 import './cust.css';
-
 import axios from "axios";
 
 
 const Tables=()=>{
-  const [data1, setData1] = useState({});
+  const [data1, setData1] = useState([]);
 
   useEffect(async () => {
     const res = await axios.get(
@@ -18,10 +17,11 @@ const Tables=()=>{
     );
     console.log(res.data);
     setData1(res.data);
-    // const img=data1[7].img_src;
-
   }, []);
-  // data1? console.log(data1[1].chat_id) :alert("Hi");
+
+  const d = data1.map((i)=>i.img_src) ;  
+console.log(d[0]);
+
 const VoteHandler = (record,type) =>{
     
     let newArr=[];
@@ -68,7 +68,7 @@ const VoteHandler = (record,type) =>{
   
   const [data,setVote] = useState([{
     key: '1',
-    // productimage:img,
+    productimage:d[0],
     productnumber:'Dennis Lingo',
     productname:'Men Slim Fit Casual Shirt',
     Sender:'Tripti',
