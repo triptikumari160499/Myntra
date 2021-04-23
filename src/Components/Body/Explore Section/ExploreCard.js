@@ -36,7 +36,7 @@ const ExploreCard = (props) => {
 downvotes: "1",
 enabled: true,
 img_src: sendImg,
-post_id: id,
+post_id: "7",
 sender: "Anshul",
 upvotes: "1",
     };
