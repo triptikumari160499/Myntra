@@ -54,17 +54,13 @@ const Tables = () => {
     setFinalData(res.data);
   }, []);
 
-  const config = {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  };
-  
-
   const VoteHandler = (record, type) => {
-    const body = {
-      ...finalData,
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
     };
+   
     let newArr = [];
 
     //for Deleting the item
@@ -82,21 +78,41 @@ const Tables = () => {
       if (element["post_id"] === record["post_id"]) {
         //Disables vote
         const id = element["post_id"];
-        if (type === 2) {
-          axios.put(
-            `https://myntra-backend-hackathon.herokuapp.com/track/upvote/${id}`,
-            body,
-            config
-          ).then(res=>console.log(res)).catch(er=>console.log(er));
+        if (type === 2) {  
           element["enabled"] = false;
           alert("Polls Disabled!!");
         }
         if (element["enabled"] == true) {
           //Upvotes
-          if (type === 0) element["upvotes"] += 1;
-          else if (type === 1)
+          if (type === 0) {
+            element["upvotes"] += 1
+            const up = {
+              upvotes: element["upvotes"],
+            };
+            axios
+            .put(
+              `https://myntra-backend-hackathon.herokuapp.com/track/upvote/${id}`,
+              up,
+              config
+            )
+            .then(res => console.log(res))
+            .catch(er => console.log(er))
+          }
+          else if (type === 1){
             //Downvotes
             element["downvotes"] += 1;
+            const down = {
+              downvotes: element["downvotes"],
+            };
+            axios
+            .put(
+              `https://myntra-backend-hackathon.herokuapp.com/track/downvote/${id}`,
+              down,
+              config
+            )
+            .then(res => console.log(res))
+            .catch(er => console.log(er))
+          }
         }
       }
 
@@ -113,7 +129,7 @@ const Tables = () => {
       render: (text, record) => {
         return (
           <div>
-            <img className="productImage" src={record.img_src}/>
+            <img className="productImage" src={record.img_src} />
           </div>
         );
       },
