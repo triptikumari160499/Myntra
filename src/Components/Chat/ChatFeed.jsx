@@ -9,7 +9,7 @@ const ChatFeed = (props) => {
 
   useEffect(async () => {
     const res = await axios.get(
-      "https://myntra-backend-hackathon.herokuapp.com/images/"
+      "https://myntra-backend-hackathon.herokuapp.com/tracks/"
     );
     console.log(res.data);
     setData(res.data);

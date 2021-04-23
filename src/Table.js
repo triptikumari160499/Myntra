@@ -1,10 +1,10 @@
-import React, { useEffect,useState } from "react";
-import {Table} from "antd";
-import 'antd/dist/antd.css';
+import React, { useEffect, useState } from "react";
+import { Table, Tag } from "antd";
+import "antd/dist/antd.css";
 // import { Button } from "bootstrap";
 import Button from "react-bootstrap/Button";
 import Chart from "react-google-charts";
-import './cust.css';
+import "./cust.css";
 import axios from "axios";
 
 const pieOptions = {
@@ -12,277 +12,213 @@ const pieOptions = {
   pieHole: 0,
   slices: [
     {
-      color: "#23c436"
+      color: "#23c436",
     },
     {
-      color: "#fc3d70"
+      color: "#fc3d70",
     },
     {
-      color: "#007fad"
+      color: "#007fad",
     },
     {
-      color: "#e9a227"
-    }
+      color: "#e9a227",
+    },
   ],
   legend: {
     position: "bottom",
     alignment: "center",
     textStyle: {
       color: "233238",
-      fontSize: 14
-    }
+      fontSize: 14,
+    },
   },
   tooltip: {
-    showColorCode: true
+    showColorCode: true,
   },
   chartArea: {
     left: 10,
     top: 10,
     width: "100%",
-    height: "80%"
+    height: "80%",
   },
-  fontName: "Roboto"
+  fontName: "Roboto",
 };
 
-
-const Tables=()=>{
-
-  const [data1, setData1] = useState([]);
-
+const Tables = () => {
+  const [finalData, setFinalData] = useState([]);
+  const [data, setVote] = useState([finalData]);
   useEffect(async () => {
     const res = await axios.get(
-      "https://myntra-backend-hackathon.herokuapp.com/images/"
+      "https://myntra-backend-hackathon.herokuapp.com/tracks/"
     );
-    console.log(res.data);
-    setData1(res.data);
+    setFinalData(res.data);
   }, []);
 
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
   
-  const d = data1.map((i)=>i.img_src) ;  
-  console.log(d[0]);
 
-const VoteHandler = (record,type) =>{
-    
-    let newArr=[];
+  const VoteHandler = (record, type) => {
+    const body = {
+      ...finalData,
+    };
+    let newArr = [];
+
     //for Deleting the item
-    if(type===3)
-    { 
-      data.forEach(element =>{
-        if(element['key']===record['key'])
-          return;
-        newArr.push(element);
-       });
-       alert('Product :'+record.productnumber+' deleted!');
+    if (type === 3) {
+      finalData.forEach((element) => {
+        if (element["post_id"] === record["post_id"]) return;
+      });
+      alert("Product deleted ??");
+    } else {
+      newArr = [...finalData];
     }
-    else{
-      newArr=[...data]; // copy of existing data
-    }
+
     //for handling votes
-    data.forEach(element => {
-      if(element['key']===record['key'])   // find the button to update state
-      {
+    finalData.forEach((element) => {
+      if (element["post_id"] === record["post_id"]) {
         //Disables vote
-        if(type===2)
-        {
-          element['polls']['state']=false;
-          alert('Polls Disabled for '+record.productnumber);
+        const id = element["post_id"];
+        if (type === 2) {
+          axios.put(
+            `https://myntra-backend-hackathon.herokuapp.com/track/upvote/${id}`,
+            body,
+            config
+          ).then(res=>console.log(res)).catch(er=>console.log(er));
+          element["enabled"] = false;
+          alert("Polls Disabled!!");
         }
-        
-        if(element['polls']['state']==true){
-        //Upvotes
-          if(type===0)
-        element['polls']['up']+=1;
-        else if(type===1)//Downvotes
-        element['polls']['down']+=1;
+        if (element["enabled"] == true) {
+          //Upvotes
+          if (type === 0) element["upvotes"] += 1;
+          else if (type === 1)
+            //Downvotes
+            element["downvotes"] += 1;
         }
       }
+
       setVote(newArr); // set the Changed state
     });
-  
-   // console.log(record);
-  }
-  // const DownVoteHandler = () =>{
-  //   setDownNumber(DownNumber+1)
-  // }
-  
-  const [data,setVote] = useState([{
-    key: '1',
-    productimage:d[0],
-    productlink:"https://www.myntra.com/shirts/dennis-lingo/dennis-lingo-men-pink-slim-fit-solid-casual-shirt/7488102/buy",
-    Sender:'Tripti',
-    Delete: 'Delete',
-    polls:{
-      up:0,down: 0,state:true,
-    },
-    }, 
-    {
-    key: '2',
-    productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/2414313/2018/3/13/11520926368526-HERENOW-Men-Red--Black-Regular-Fit-Checked-Casual-Shirt-8881520926368447-1.jpg',
-    productlink:"https://www.myntra.com/shirts/herenow/herenow-men-red--black-regular-fit-checked-casual-shirt/2414313/buy",
-    Sender:'Tripti',
-    Delete: 'Delete',
-    polls:{
-      up:0,down: 0,state:true,
-    },  
-  }, 
-    {
-    key: '3',
-    productimage:'https://assets.myntassets.com/dpr_1.5,q_60,w_100,c_limit,fl_progressive/assets/images/productimage/2020/1/11/eb462dc3-eee9-4e28-ad71-07dc4c6410961578698196717-1.jpg',
-    productlink:"https://www.myntra.com/dresses/athena/athena-women-burgundy--brown-embellished-sheath-dress/11312210/buy",
-    Sender:'Tripti',
-    Delete: 'Delete',
-    polls:{
-      up:0, down: 0,state:true,
-    },  
-  }, 
-    {
-    key: '4',
-    productimage:'https://assets.myntassets.com/fl_progressive/q_80,w_150/v1/assets/images/8802271/2019/2/25/4265862d-956f-44a3-80b0-89147b9fe18b1551097050778-StyleStone-Womens-Tie-up-Rainbow-Print-Maxi-dress-4391551097-1.jpg',
-    productlink:"https://www.myntra.com/dresses/rain--rainbow/rain--rainbow-women-lime-green--golden-sequinned-yoke-printed-tie-up-maxi-dress/12334686/buy",
-    Sender:'Tripti',
-    Delete: 'Delete',
-    polls:{
-      up: 0,down: 0,state:true,
-    },
-  }]);
+  };
 
-  
-
-
-  // const [data,setDownNumber] = useState(data);
+  // COLUMNS
   const columns = [
     {
-    title: 'Product',
-    dataIndex: 'Product',
-    key: 'Product',
-    render: (text, record) => {
-       return (
-        <div >
-        <a href={record.productlink}>
-        <img src={record.productimage}/>
-        </a>
-        {/*<Avatar src={record.productimage}/> */}
-          
-           <div>{record.productnumber}</div>
-           <a href="javascript:alert('Check');">{record.productname}</a>
-           </div>
-      );
+      title: "Product",
+      dataIndex: "img_src",
+      key: "img_src",
+      render: (text, record) => {
+        return (
+          <div>
+            <img className="productImage" src={record.img_src}/>
+          </div>
+        );
       },
-    }, 
-    // {
-    //   title: 'Details',
-    //   dataIndex: 'tags',
-    //   key: 'Details',
-    //   render: (text,record)=>{
-    //     return(
-    //       // Styling is done here (Capital case dark shade, Small case light shade)
-    //       <div>
-    //       {record.tags.map((tag)=> <Tag color={record.tags[1]}>{tag}</Tag>)}
-    //       </div>
-    //     );
-    //   }
-    //   ,
-    // },
-    {
-      title: 'Visual Trend',
-      dataIndex: 'polls',
-      key: 'Graph',
-      render : (text,record)=>{
-        return( 
-          <div className="chartstyle">
-        <Chart
-          chartType="PieChart"
-          data={[["Ups", "Downs"], ["Ups",record['polls']['up']], ["Downs", record['polls']['down']]]}
-          options={pieOptions}
-     
-          width={"100%"}
-          height={"200px"}
-          legend_toggle
-        />
-      </div>
-        )
-      }
     },
     {
-      title: 'User Polls',
-      dataIndex: 'polls',
-      key: 'Polls',
-      render: (text,record)=>{
-        return(
-          // Styling is done here (Capital case dark shade, Small case light shade)
-       
+      title: "Visual Trend",
+      dataIndex: "polls",
+      key: "Graph",
+      render: (text, record) => {
+        return (
+          <div className="chartstyle">
+            <Chart
+              chartType="PieChart"
+              data={[
+                ["Ups", "Downs"],
+                ["Ups", record["upvotes"]],
+                ["Downs", record["downvotes"]],
+              ]}
+              options={pieOptions}
+              width={"100%"}
+              height={"200px"}
+              legend_toggle
+            />
+          </div>
+        );
+      },
+    },
+    {
+      title: "User Polls",
+      dataIndex: "polls",
+      key: "Polls",
+      render: (text, record) => {
+        return (
           <div class="container">
             <div class="row spacing">
               <div class="col-xs-4">
-              <Button variant="light" onClick={()=>{VoteHandler(record,0)}}><i class="fa fa-thumbs-up" aria-hidden="true"></i></Button> 
+                <Button
+                  variant="light"
+                  onClick={() => {
+                    VoteHandler(record, 0);
+                  }}
+                >
+                  <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                </Button>
               </div>
-              <div class="col-xs-4 colspace">
-              {record.polls['up']}
-              </div>
-          </div>
-  
-          <div class="row spacing">
+              <div class="col-xs-4 colspace">{record.upvotes}</div>
+            </div>
+
+            <div class="row spacing">
               <div class="col-xs-4 ">
-              <Button variant="light" onClick={()=>{VoteHandler(record,1)}}><i class="fa fa-thumbs-down"></i></Button> 
+                <Button
+                  variant="light"
+                  onClick={() => {
+                    VoteHandler(record, 1);
+                  }}
+                >
+                  <i class="fa fa-thumbs-down"></i>
+                </Button>
               </div>
-              <div class="col-xs-4 colspace">
-              {record.polls['down']}
-              </div>
+              <div class="col-xs-4 colspace">{record.downvotes}</div>
+            </div>
           </div>
-  
-            </div>    
         );
-       }
-      ,
+      },
     },
     {
-      title: 'Sender',
-      dataIndex: 'Sender', 
-      key: 'Sender',  
-     },
-  //  {
-  //   title: 'Address',
-  //   dataIndex: 'address', 
-  //   key: 'address',  
-  //  },
-   
-   {
-    title: 'Disable Poll',
-    key: 'Disable', 
-    render: (text, record) => {
-      return (
-       <div>
-       {/*<Avatar src={record.productimage}/> */}
-         {/* To Disable like dislike button */}
-          <Button onClick={()=>VoteHandler(record,2)}>Disable</Button>
+      title: "Sender",
+      dataIndex: "sender",
+      key: "sender",
+    },
+    {
+      title: "Disable Poll",
+      key: "enabled",
+      render: (text, record) => {
+        return (
+          <div>
+            <Button onClick={() => VoteHandler(record, 2)}>Disable</Button>
           </div>
-     );}, 
-   },
-   {
-    title: 'Delete',
-    dataIndex: 'Delete', 
-    key: 'Delete', 
-    render: (text, record) => {
-      return (
-       <div>
-       {/*<Avatar src={record.productimage}/> */}
-         {/* To Disable like dislike button */}
-          <Button variant="danger" onClick={()=>VoteHandler(record,3)}>{record.Delete}</Button>
+        );
+      },
+    },
+    {
+      title: "Delete",
+      dataIndex: "Delete",
+      key: "Delete",
+      render: (text, record) => {
+        return (
+          <div>
+            <Button variant="danger" onClick={() => VoteHandler(record, 3)}>
+              Delete
+            </Button>
           </div>
-     );}, 
-   },
+        );
+      },
+    },
+  ];
 
-   ];
-   
-  return <div className="stylerbg">
-  <div className="container header"> Room Wishlist </div> 
-  <div className="tableStyle">
-  <Table dataSource={data} columns={columns} 
-   align="center"/>;
-  </div>
-  </div>  
-}
+  return (
+    <div className="stylerbg">
+      <div className="container header"> Room Wishlist </div>
+      <div className="tableStyle">
+        <Table dataSource={finalData} columns={columns} align="center" />;
+      </div>
+    </div>
+  );
+};
 
-
-
-  export default Tables;
+export default Tables;

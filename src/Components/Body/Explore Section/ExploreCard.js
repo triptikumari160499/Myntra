@@ -16,7 +16,7 @@ const ExploreCard = (props) => {
       method: "get",
       headers: {
         "Content-Type": "application/json",
-        "Project-ID": "2dce4089-e3a8-48cb-a8a6-33eda4c3799f",
+        "Project-ID": "074fa758-92f5-45e0-baeb-00b7bbf5e367",
         "User-Name": "Anshul",
         "User-Secret": "anshul",
       },
@@ -33,10 +33,15 @@ const ExploreCard = (props) => {
     };
     const body = {
       chat_id: id,
-      img_src: sendImg,
+downvotes: "1",
+enabled: true,
+img_src: sendImg,
+post_id: id,
+sender: "Anshul",
+upvotes: "1",
     };
     const res = await axios.post(
-      "https://myntra-backend-hackathon.herokuapp.com/images/",
+      "https://myntra-backend-hackathon.herokuapp.com/tracks/",
       body,
       config
     );
@@ -48,10 +53,13 @@ const ExploreCard = (props) => {
   };
   return (
     <>
-    <Link to="/Photo">
+    
       <div class="col mt-4">
+      
         <div className="card">
+        <Link to="/Photo">
           <img src={props.image} alt="" />
+          </Link>
           <div class="card-link-div card-body">
             <Button
               variant="light"
@@ -91,8 +99,9 @@ const ExploreCard = (props) => {
             </Link>
           </div>
         </div>
+        
       </div>
-      </Link>
+      
     </>
   );
 };
