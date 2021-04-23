@@ -15,6 +15,7 @@ const ExploreCard = (props) => {
       url: `https://api.chatengine.io/chats/`,
       method: "get",
       headers: {
+        
         "Content-Type": "application/json",
         "Project-ID": "074fa758-92f5-45e0-baeb-00b7bbf5e367",
         "User-Name": "Anshul",
@@ -31,12 +32,12 @@ const ExploreCard = (props) => {
         "Content-Type": "application/json",
       },
     };
-    const body = {
+       const body = {
       chat_id: id,
 downvotes: "1",
 enabled: true,
 img_src: sendImg,
-post_id: "7",
+post_id: id,
 sender: "Anshul",
 upvotes: "1",
     };
