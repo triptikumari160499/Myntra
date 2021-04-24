@@ -55,7 +55,7 @@ const Tables = () => {
   }, []);
 
   const VoteHandler = (record, type) => {
-    const id = record["post_id"];
+    const id = record["id"];
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -67,10 +67,10 @@ const Tables = () => {
     //for Deleting the item
     if (type === 3) {
       finalData.forEach((element) => {
-        if (element["post_id"] === record["post_id"]) {
+        if (element["id"] === record["id"]) {
           axios
             .delete(
-              `https://myntra-backend-hackathon.herokuapp.com/track/delete/${id}`
+              `https://myntra-backend-hackathon.herokuapp.com/tracks/${id}/`
             )
             .then((res) => console.log(res))
             .catch((er) => console.log(er));
@@ -82,7 +82,7 @@ const Tables = () => {
     }
     //for handling votes
     finalData.forEach((element) => {
-      if (element["post_id"] === record["post_id"]) {
+      if (element["id"] === record["id"]) {
         //Disables vote
 
         if (type === 2) {
@@ -90,8 +90,8 @@ const Tables = () => {
             enabled: false,
           };
           axios
-            .put(
-              `https://myntra-backend-hackathon.herokuapp.com/track/disable/${id}`,
+            .get(
+              `https://myntra-backend-hackathon.herokuapp.com/tracks/${id}/enable/`,
               disable,
               config
             )
@@ -108,8 +108,8 @@ const Tables = () => {
               upvotes: element["upvotes"],
             };
             axios
-              .put(
-                `https://myntra-backend-hackathon.herokuapp.com/track/upvote/${id}`,
+              .get(
+                `https://myntra-backend-hackathon.herokuapp.com/tracks/${id}/upvote/`,
                 up,
                 config
               )
@@ -122,8 +122,8 @@ const Tables = () => {
               downvotes: element["downvotes"],
             };
             axios
-              .put(
-                `https://myntra-backend-hackathon.herokuapp.com/track/downvote/${id}`,
+              .get(
+                `https://myntra-backend-hackathon.herokuapp.com/tracks/${id}/downvote/`,
                 down,
                 config
               )
